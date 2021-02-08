@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
 
 * {
   box-sizing: border-box;
@@ -7,32 +7,32 @@
   scroll-behavior: smooth;
 }
 :root {
-  --Pink: #FC257E;
-  --Purple: #A41BE4;
+  --Pink: #fc257e;
+  --Purple: #a41be4;
 }
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   -webkit-overflow-scrolling: touch;
   overflow-y: scroll;
 }
-body::-webkit-scrollbar-track{
-  box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   background-color: transparent;
 }
-body::-webkit-scrollbar{
+body::-webkit-scrollbar {
   width: 7px;
   background-color: transparent;
 }
-body::-webkit-scrollbar-thumb{
+body::-webkit-scrollbar-thumb {
   border-radius: 10px;
   box-shadow: inset 0 0 6px var(--Purple);
   -webkit-box-shadow: inset 0 0 6px var(--Purple);
   background-color: var(--Pink);
 }
 header {
-  background-color: #FBFBFB;
+  background-color: #fbfbfb;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -45,7 +45,7 @@ header {
   width: 100%;
   z-index: 1;
   box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5),
-  0px 0px 10px rgba(0, 0, 0, 0.2);
+    0px 0px 10px rgba(0, 0, 0, 0.2);
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
 }
@@ -63,7 +63,7 @@ header a {
   margin: 0px 10px;
   padding: 0px 10px;
 }
-.nav-links li span{
+.nav-links li span {
   text-decoration: none;
   flex: 1;
   font-size: 20px;
@@ -74,10 +74,11 @@ header a {
   padding-bottom: 27px;
   cursor: pointer;
 }
-.nav-links li span:hover{
+.nav-links li span:hover {
   color: var(--Pink);
 }
-.nav-links li .nav-home:hover, .nav-links li .nav-hack:hover {
+.nav-links li .nav-home:hover,
+.nav-links li .nav-hack:hover {
   color: var(--Pink);
   border-bottom: var(--Pink) solid 5px;
 }
@@ -86,14 +87,15 @@ header a {
   border-bottom: var(--Purple) solid 5px;
 }
 .nav-links li .nav-vision:hover {
-  color: #FFA757;
-  border-bottom: #FFA757 solid 5px;
+  color: #ffa757;
+  border-bottom: #ffa757 solid 5px;
 }
 .nav-links li .nav-sponsors:hover {
-  color: #FF993B;
-  border-bottom: #FF993B solid 5px;
+  color: #ff993b;
+  border-bottom: #ff993b solid 5px;
 }
-.nav-links li .nav-home-active, .nav-links li .nav-hack-active {
+.nav-links li .nav-home-active,
+.nav-links li .nav-hack-active {
   color: var(--Pink);
   border-bottom: var(--Pink) solid 5px;
 }
@@ -102,41 +104,41 @@ header a {
   border-bottom: var(--Purple) solid 5px;
 }
 .nav-links li .nav-vision-active {
-  color: #FFA757;
-  border-bottom: #FFA757 solid 5px;
+  color: #ffa757;
+  border-bottom: #ffa757 solid 5px;
 }
 .nav-links li .nav-sponsors-active {
-  color: #FF993B;
-  border-bottom: #FF993B solid 5px;
+  color: #ff993b;
+  border-bottom: #ff993b solid 5px;
 }
-.hamburger{
+.hamburger {
   display: none;
 }
-.hamburger div{
+.hamburger div {
   width: 25px;
   height: 2px;
   background-color: #000000;
   margin: 5px;
 }
 /*Animation for hamburger*/
-.hamburger div{
+.hamburger div {
   transition: all 0.5s ease-in-out;
 }
-.hamburger.open .line2{
+.hamburger.open .line2 {
   transform: translate(-25px);
   background-color: transparent;
   transition: all 0.5s ease-in-out;
 }
-.hamburger.open .line1{
-  transform: rotate(45deg) translate(5px,5px);
+.hamburger.open .line1 {
+  transform: rotate(45deg) translate(5px, 5px);
   transition: all 0.5s ease-in-out;
 }
-.hamburger.open .line3{
-  transform: rotate(-45deg) translate(5px,-5px);
+.hamburger.open .line3 {
+  transform: rotate(-45deg) translate(5px, -5px);
   transition: all 0.5s ease-in-out;
 }
-@media screen and (max-width:1050px){
-  header{
+@media screen and (max-width: 1050px) {
+  header {
     overflow-x: hidden;
   }
   .dsc-logo {
@@ -144,23 +146,22 @@ header a {
     max-width: 200px;
     height: auto;
   }
-  .nav-links{
+  .nav-links {
     position: fixed;
     width: 50%;
     right: 0px;
     top: 65px;
-    background-color: #FBFBFB;
+    background-color: #fbfbfb;
     display: flex;
     flex-direction: column;
     align-items: center;
     transform: translateX(120%);
     transition: all 0.4s ease-in;
     border-bottom-left-radius: 30px;
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1),
-    0px -11px 0px #FBFBFB;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1), 0px -11px 0px #fbfbfb;
     padding-bottom: 10px;
   }
-  .nav-links li span{
+  .nav-links li span {
     font-size: 18px;
     font-weight: 500;
     padding: 13px 10px;
@@ -168,29 +169,31 @@ header a {
   .nav-links li {
     margin: 10px 10px;
   }
-  .nav-links li span:hover, .nav-links li span{
+  .nav-links li span:hover,
+  .nav-links li span {
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
     border-bottom: none !important;
     color: initial;
   }
-  .nav-links li .nav-home-active:hover, .nav-links li .nav-hack-active:hover {
+  .nav-links li .nav-home-active:hover,
+  .nav-links li .nav-hack-active:hover {
     color: var(--Pink);
   }
   .nav-links li .nav-about-active:hover {
     color: var(--Purple);
   }
   .nav-links li .nav-vision-active:hover {
-    color: #FFA757;
+    color: #ffa757;
   }
   .nav-links li .nav-sponsors-active:hover {
-    color: #FF993B;
+    color: #ff993b;
   }
-  .nav-links.open{
+  .nav-links.open {
     transform: translateX(0%);
   }
-  .hamburger{
+  .hamburger {
     display: block;
     cursor: pointer;
   }
@@ -245,7 +248,7 @@ header a {
   font-weight: 600;
   padding: 5px 25px;
 }
-.modal-header button{
+.modal-header button {
   position: relative;
   right: 24px;
   top: 10px;
@@ -254,7 +257,7 @@ header a {
   border: none;
   transition: all 0.1s ease-in;
 }
-.modal-header img:hover{
+.modal-header img:hover {
   cursor: pointer;
 }
 .modal-body {
@@ -280,7 +283,7 @@ header a {
 
 .home {
   width: 100%;
-  position:absolute;
+  position: absolute;
   top: 75px;
   display: flex;
   flex-direction: column;
@@ -340,7 +343,7 @@ header a {
   min-width: 400px;
   position: absolute;
   right: -50%;
-  z-index:-1;
+  z-index: -1;
 }
 .home-title {
   font-size: 30px;
@@ -428,17 +431,17 @@ header a {
   border-radius: 18px;
   background-color: var(--Pink);
   border: solid 1px transparent;
-  color: #FFFFFF;
+  color: #ffffff;
   outline: none;
   font-size: 18px;
   font-weight: 600;
   cursor: pointer;
-  transition: all .1s ease-in-out;    
+  transition: all 0.1s ease-in-out;
 }
 .button:hover {
   background-color: #ec2377;
   transform: scale(1.05);
-  transition: all .1s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 .vision {
   position: relative;
@@ -450,7 +453,7 @@ header a {
   justify-content: flex-start;
 }
 .vision .home-title {
-  color: #FFA757;
+  color: #ffa757;
   align-self: flex-start;
   margin: 20px;
 }
@@ -488,7 +491,7 @@ header a {
   display: flex;
   flex-direction: row;
   padding: 5px 0px;
-  color: #FF993B;
+  color: #ff993b;
   font-size: 30px;
   font-weight: 800;
   border-bottom: solid 3px;
@@ -498,31 +501,31 @@ header a {
   display: grid;
   grid-template-columns: 50% 50%;
 }
-.sponsors-gallery img{
+.sponsors-gallery img {
   margin: 20px auto;
   padding: 0px 20px;
   max-width: 100%;
 }
-@media screen and (min-width:400px){
+@media screen and (min-width: 400px) {
   .first-soon {
     font-size: 3rem;
   }
-  .first-img img{
+  .first-img img {
     width: 125%;
-    right:-42%;
+    right: -42%;
   }
   .hack-bg {
     height: 130%;
     top: -5%;
   }
 }
-@media screen and (min-width:550px){
+@media screen and (min-width: 550px) {
   .first .button {
     min-width: initial;
     width: 300px;
   }
   .first-img img {
-    right:-40%;
+    right: -40%;
   }
   .about {
     margin-top: 60px;
@@ -537,13 +540,14 @@ header a {
     height: 105%;
   }
 }
-@media screen and (min-width:900px){
-  .home > div{
+@media screen and (min-width: 900px) {
+  .home > div {
     flex-direction: row;
     justify-content: space-between;
     width: 100vw;
   }
-  .home div .first, .home .hackathon {
+  .home div .first,
+  .home .hackathon {
     flex-direction: column;
     align-items: center;
   }
@@ -573,13 +577,13 @@ header a {
     font-size: 18px;
     margin-top: 0;
   }
-  .first-img{
+  .first-img {
     width: 70vw;
     height: 50vw;
     max-height: 830px;
     margin: 40px 0px;
   }
-  .first-img img{
+  .first-img img {
     margin: 40px 0px;
     max-width: 1000px;
     position: absolute;
@@ -599,13 +603,13 @@ header a {
     height: 160%;
     top: -20%;
   }
-  .about ul li p{
+  .about ul li p {
     font-size: 14px;
   }
   .about ul {
     width: 60vw;
   }
-  .about ul li:last-child{
+  .about ul li:last-child {
     width: 50vw;
   }
   .about-img {
@@ -697,7 +701,7 @@ header a {
     max-width: 25%;
   }
 }
-@media screen and (min-width:1000px) {
+@media screen and (min-width: 1000px) {
   header {
     padding-left: 50px;
     padding-right: 50px;
@@ -716,22 +720,23 @@ header a {
     grid-column-start: 3;
     grid-column-end: 4;
   }
-  .sponsors .sponsors-gallery div:last-child img, .sponsors .sponsors-gallery div:nth-last-child(2) img {
+  .sponsors .sponsors-gallery div:last-child img,
+  .sponsors .sponsors-gallery div:nth-last-child(2) img {
     max-width: 100%;
   }
 }
-@media screen and (min-width:1500px) {
+@media screen and (min-width: 1500px) {
   .first {
     top: -5vh;
   }
   .first-logo {
     max-width: none;
   }
-  .first-logo svg{
+  .first-logo svg {
     margin: 10px 0;
     max-width: none;
     width: 50%;
-    transform: scale(1.25)
+    transform: scale(1.25);
   }
   .first-soon {
     font-size: 4rem;
@@ -745,13 +750,13 @@ header a {
     border-radius: 25px;
     font-size: 20px;
   }
-  .first-img{
+  .first-img {
     width: 70vw;
     height: 40vw;
     max-height: 830px;
     margin: 40px 0px;
   }
-  .first-img img{
+  .first-img img {
     width: 120%;
     max-width: 1500px;
     margin: 40px 0px;
@@ -769,7 +774,7 @@ header a {
     top: -15%;
     left: 0%;
   }
-  .about ul li p{
+  .about ul li p {
     font-size: 20px;
   }
   .about-img {
@@ -831,7 +836,7 @@ header a {
     font-size: 40px;
   }
 }
-@media screen and (min-width:1875px) {
+@media screen and (min-width: 1875px) {
   .vision-bg {
     height: 225%;
     top: -35%;
