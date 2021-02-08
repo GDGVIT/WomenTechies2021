@@ -29,6 +29,14 @@ const Home = ({ setActive, introRef, aboutRef, hackRef, visionRef, sponsorsRef }
   document.onmouseup = hisom
   document.onpointerup = hisom
 
+  const scrollFunc = () => {
+    setOffset(window.pageYOffset)
+    if (offset <= (intro + about) / 2) setActive('intro')
+    else if (offset <= (about + hack) / 2) setActive('about')
+    else if (offset <= (hack + vision) / 2) setActive('hack')
+    else if (offset <= (vision + sponsors) / 2) setActive('vision')
+    else setActive('sponsors')
+  }
   useEffect(() => {
     setIntro(introRef.current.offsetTop)
     setAbout(aboutRef.current.offsetTop)
@@ -36,19 +44,9 @@ const Home = ({ setActive, introRef, aboutRef, hackRef, visionRef, sponsorsRef }
     setVision(visionRef.current.offsetTop)
     setSponsors(sponsorsRef.current.offsetTop)
     window.onscroll = () => {
-      setOffset(window.pageYOffset)
-      if (offset <= (intro + about) / 2) setActive('intro')
-      else if (offset <= (about + hack) / 2) setActive('about')
-      else if (offset <= (hack + vision) / 2) setActive('hack')
-      else if (offset <= (vision + sponsors) / 2) setActive('vision')
-      else setActive('sponsors')
+      scrollFunc()
     }
-    setOffset(window.pageYOffset)
-    if (offset <= (intro + about) / 2) setActive('intro')
-    else if (offset <= (about + hack) / 2) setActive('about')
-    else if (offset <= (hack + vision) / 2) setActive('hack')
-    else if (offset <= (vision + sponsors) / 2) setActive('vision')
-    else setActive('sponsors')
+    scrollFunc()
   }, [introRef, aboutRef, hackRef, visionRef, sponsorsRef, offset, intro, about, setActive, hack, vision, sponsors])
 
   return (
