@@ -10,7 +10,7 @@ import bugsee from './../assets/past-sponsors/bugsee.png'
 import lbry from './../assets/past-sponsors/lbry.png'
 import opensuse from './../assets/past-sponsors/opensuse.png'
 import brochure from './../assets/Brochure.pdf'
-import { FaDownload } from "react-icons/fa";
+import { FaDownload } from 'react-icons/fa'
 
 const Sponsors = React.forwardRef(({ setSponsors }, ref) => {
   return (
@@ -28,7 +28,7 @@ const Sponsors = React.forwardRef(({ setSponsors }, ref) => {
         <div><img src={lbry} alt='LBRY' /></div>
         <div><img src={opensuse} alt='openSUSE' /></div>
       </div>
-      <a href={brochure} download><button className="download button"><FaDownload style={{ color: '#fff', cursor: 'pointer' }} /> Download Brochure</button></a>
+      <a href={brochure} download><button className='download button'><FaDownload style={{ color: '#fff', cursor: 'pointer' }} /> Download Brochure</button></a>
     </div>
   )
 })
