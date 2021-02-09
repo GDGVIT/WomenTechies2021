@@ -27,7 +27,7 @@ const Intro = React.forwardRef(({ setIntro }, ref) => {
 
         </div>
         <div className='first-soon'>Coming Soon</div>
-        <a href='https://www.instagram.com/reel/CLBd9tWBIGY/?igshid=1uga220uun2gt' target='_blank' rel='noreferrer' className='first-teaser'><BsFillPlayFill style={{ color: '#FC257E', cursor: 'pointer' }} />    Recap</a>
+        <a href='https://www.instagram.com/reel/CLBd9tWBIGY/?igshid=1uga220uun2gt' target='_blank' rel='noreferrer' className='first-teaser'><BsFillPlayFill style={{ color: '#fc257e', cursor: 'pointer' }} />    Recap</a>
         <a href='https://dsc.community.dev/events/details/developer-student-clubs-vellore-institute-of-technology-presents-womentechies-2021/#/' target='_blank' rel='noreferrer'><button className='button'>Sign Up for Updates</button></a>
       </div>
       <div className='first-img'><img src={intro} alt='Women Techies 2021' /></div>
