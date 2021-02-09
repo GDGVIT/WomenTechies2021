@@ -20,7 +20,7 @@ const Contact = React.forwardRef(({ setContact }, ref) => {
         </li>
         <li>
           <div className='contact-name'>Shubham Srivastava</div>
-          <a className='contact-email' href='shubhamsriv99@outlook.com'>shubhamsriv99@outlook.com</a>
+          <a className='contact-email' href='mailto:shubhamsriv99@outlook.com'>shubhamsriv99@outlook.com</a>
           <span className='contact-no'>+91 9818891967</span>
         </li>
       </ul>
