@@ -2,7 +2,7 @@ import { useState } from 'react'
 import dscLogo from './../assets/dsc-logo.png'
 import Modal from './Modal'
 
-const Nav = ({ active, introRef, aboutRef, hackRef, visionRef, sponsorsRef }) => {
+const Nav = ({ active, introRef, aboutRef, hackRef, visionRef, sponsorsRef, contactRef }) => {
   const [menuOpen, setMenuOpen] = useState(false)
   const [show, setShow] = useState(false)
 
@@ -28,6 +28,10 @@ const Nav = ({ active, introRef, aboutRef, hackRef, visionRef, sponsorsRef }) =>
     if (menuOpen) onClick()
     sponsorsRef.scrollIntoView({ behavior: 'smooth' })
   }
+  const contactScroll = () => {
+    if (menuOpen) onClick()
+    contactRef.scrollIntoView({ behavior: 'smooth' })
+  }
 
   return (
     <>
@@ -43,6 +47,7 @@ const Nav = ({ active, introRef, aboutRef, hackRef, visionRef, sponsorsRef }) =>
             {/* <li><NavLink to="timeline" exact activeClassName='nav-active' onClick={() => setShow(true)}>Timeline</NavLink></li> */}
             {/* <li><NavLink to="speakers" exact activeClassName='nav-active' onClick={() => setShow(true)}>Speakers</NavLink></li> */}
             <li><span className={`nav-sponsors ${(active === 'sponsors') ? 'nav-sponsors-active' : ''}`} onClick={sponsorsScroll}>Sponsors</span></li>
+            <li><span className={`nav-contact ${(active === 'contact') ? 'nav-contact-active' : ''}`} onClick={contactScroll}>Contact Us</span></li>
             {/* <li><NavLink to="contact-us" exact activeClassName='nav-active' onClick={() => setShow(true)}>Contact Us</NavLink></li> */}
             {/* <li><NavLink to="faq" exact activeClassName='active' onClick={() => setShow(true)}>FAQ's</NavLink></li> */}
             <Modal show={show} onClose={() => setShow(false)} />

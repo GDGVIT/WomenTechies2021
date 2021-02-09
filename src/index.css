@@ -90,7 +90,8 @@ header a {
 }
 
 .nav-links li .nav-home:hover,
-.nav-links li .nav-hack:hover {
+.nav-links li .nav-hack:hover,
+.nav-links li .nav-contact:hover {
   color: var(--Pink);
   border-bottom: var(--Pink) solid 5px;
 }
@@ -111,7 +112,8 @@ header a {
 }
 
 .nav-links li .nav-home-active,
-.nav-links li .nav-hack-active {
+.nav-links li .nav-hack-active,
+.nav-links li .nav-contact-active {
   color: var(--Pink);
   border-bottom: var(--Pink) solid 5px;
 }
@@ -159,7 +161,7 @@ header a {
   transition: all 0.5s ease-in-out;
 }
 
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 1200px) {
   header {
     overflow-x: hidden;
   }
@@ -193,7 +195,7 @@ header a {
   }
 
   .nav-links li {
-    margin: 10px 10px;
+    margin: 10px 9px;
   }
 
   .nav-links li span,
@@ -206,7 +208,8 @@ header a {
   }
 
   .nav-links li .nav-home-active:hover,
-  .nav-links li .nav-hack-active:hover {
+  .nav-links li .nav-hack-active:hover,
+  .nav-links li .nav-contact-active:hover {
     color: var(--Pink);
   }
 
@@ -371,11 +374,7 @@ header a {
   display: flex;
   align-items: center;
   text-decoration: none;
-}
-
-.first a:hover {
-  color: var(--Pink);
-  transition: all 0.1s ease;
+  margin: 5px 0;
 }
 
 .first-teaser {
@@ -408,7 +407,7 @@ header a {
 
 .about {
   position: relative;
-  margin: 30px 0;
+  margin: 40px 0;
   padding: 20px 0;
 }
 
@@ -494,7 +493,6 @@ header a {
   height: 36px;
   min-width: 75%;
   padding: 0 5px;
-  margin-top: 10px;
   border-radius: 18px;
   background-color: var(--Pink);
   border: solid 1px transparent;
@@ -579,6 +577,7 @@ header a {
 }
 
 .sponsors .sponsors-gallery {
+  margin-bottom: 20px;
   max-width: 100%;
   display: grid;
   grid-template-columns: 50% 50%;
@@ -590,8 +589,97 @@ header a {
   max-width: 100%;
 }
 
+.sponsors a {
+  text-decoration: none;
+}
+
+.download.button {
+  width: auto;
+  padding: 0 20px;
+  background-color: #ff993b;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.download.button svg {
+  margin-right: 4px;
+}
+
+.contact {
+  margin-top: 40px;
+  background-color: #ffeef5;
+  padding: 20px 50px;
+  justify-content: space-around;
+}
+
+.contact .contact-title {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: row;
+  padding: 5px 0;
+  color: var(--Pink);
+  font-size: 30px;
+  font-weight: 800;
+  border-bottom: solid 3px;
+}
+
+.contact ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: 10px 0;
+}
+
+.contact ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.contact-name {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.contact-email {
+  text-decoration: none;
+  color: #707070;
+}
+
+.contact-no {
+  color: #707070;
+}
+
+.social-title {
+  font-size: 17px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+.contact .social-gallery {
+  margin-bottom: 20px;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.social-gallery img {
+  margin: 20px auto;
+  padding: 0 20px;
+  max-width: 100%;
+}
+
 .modal-header img:hover {
   cursor: pointer;
+}
+
+.first a:hover {
+  color: var(--Pink);
+  transition: all 0.1s ease;
 }
 
 @media screen and (min-width: 400px) {
@@ -633,6 +721,20 @@ header a {
 
   .vision-bg {
     height: 105%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contact ul {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 40px 0;
+  }
+
+  .contact .social-gallery {
+    grid-template-columns: 25% 25% 25% 25%;
   }
 }
 
@@ -822,6 +924,26 @@ header a {
     max-width: 25%;
   }
 
+  .download.button:hover {
+    background-color: #f58e2e;
+  }
+
+  .home .contact {
+    flex-direction: column;
+  }
+
+  .contact ul {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 40px 0;
+  }
+
+  .contact .social-gallery {
+    grid-template-columns: 25% 25% 25% 25%;
+  }
+
   .home div .first,
   .home .hackathon {
     flex-direction: column;
@@ -994,6 +1116,29 @@ header a {
 
   .sponsors .sponsors-title {
     font-size: 40px;
+  }
+
+  .download.button {
+    font-size: 20px;
+    padding: 0 15px;
+    background-color: #ff993b;
+  }
+
+  .contact .contact-title {
+    font-size: 40px;
+  }
+
+  .contact-name {
+    font-size: 20px;
+  }
+
+  .contact-email,
+  .contact-no {
+    font-size: 17px;
+  }
+
+  .social-title {
+    font-size: 20px;
   }
 
   .about ul li p {
