@@ -374,6 +374,7 @@ header a {
   display: flex;
   align-items: center;
   text-decoration: none;
+  margin: 5px 0;
 }
 
 .first-teaser {
@@ -406,7 +407,7 @@ header a {
 
 .about {
   position: relative;
-  margin: 30px 0;
+  margin: 40px 0;
   padding: 20px 0;
 }
 
@@ -599,6 +600,10 @@ header a {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.download.button svg {
+  margin-right: 4px;
 }
 
 .contact {
