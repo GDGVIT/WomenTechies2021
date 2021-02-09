@@ -14,7 +14,7 @@ const About = React.forwardRef(({ setAbout }, ref) => {
           </li>
           <li>
             <div className='home-title'>About VIT</div>
-            <p>Vellore Institute of Technology, Vellore VIT, Vellore is one of the top-rated engineering colleges in India. Diversity is the strongest aspect of the institute and the students from various states and nations, the key to its reputation. The university works on ideas and executes tasks of different domains under Clubs and Chapters.</p>
+            <p>Vellore Institute of Technology, Vellore is one of the top-rated engineering colleges in India. Diversity is the strongest aspect of the institute and the students from various states and nations, the key to its reputation. The university works on ideas and executes tasks of different domains under Clubs and Chapters.</p>
           </li>
         </ul>
       </div>
