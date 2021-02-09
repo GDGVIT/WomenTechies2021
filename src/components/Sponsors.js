@@ -28,7 +28,7 @@ const Sponsors = React.forwardRef(({ setSponsors }, ref) => {
         <div><img src={lbry} alt='LBRY' /></div>
         <div><img src={opensuse} alt='openSUSE' /></div>
       </div>
-      <a href={brochure} download><button className='download button'><FaDownload style={{ color: '#fff', cursor: 'pointer' }} /> Download Brochure</button></a>
+      <a href={brochure} download><button className='download button'><FaDownload style={{ color: '#fff', cursor: 'pointer' }} />     Download Brochure</button></a>
     </div>
   )
 })
