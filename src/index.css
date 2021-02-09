@@ -583,6 +583,10 @@ header a {
   grid-template-columns: 50% 50%;
 }
 
+.sponsors-gallery div {
+  display: block;
+}
+
 .sponsors-gallery img {
   margin: 20px auto;
   padding: 0 20px;
