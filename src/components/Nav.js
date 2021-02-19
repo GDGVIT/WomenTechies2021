@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import dscLogo from './../assets/dsc-logo.png'
 import discord from './../assets/discord.png'
 import Modal from './Modal'
@@ -6,6 +6,7 @@ import Modal from './Modal'
 const Nav = ({ active, introRef, aboutRef, hackRef, visionRef, sponsorsRef, contactRef }) => {
   const [menuOpen, setMenuOpen] = useState(false)
   const [show, setShow] = useState(false)
+  const [discoom, setDiscoom] = useState(true)
 
   const onClick = () => setMenuOpen(!menuOpen)
 
@@ -34,6 +35,13 @@ const Nav = ({ active, introRef, aboutRef, hackRef, visionRef, sponsorsRef, cont
     contactRef.scrollIntoView({ behavior: 'smooth' })
   }
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setDiscoom(false)
+    }, 3000)
+    return () => clearTimeout(timer)
+  }, [discoom])
+
   return (
     <>
       <header>
@@ -60,7 +68,7 @@ const Nav = ({ active, introRef, aboutRef, hackRef, visionRef, sponsorsRef, cont
           <div className='line3' />
         </div>
       </header>
-      <div className='discord-widget'>
+      <div className={`discord-widget ${discoom && 'open'}`}>
         <a href='https://discord.gg/dEqfTTPPR4' target='_blank' rel='noreferrer'>
           <img src={discord} alt='Discord' className='discord-logo' />
           <div className='discord-bg'>Join the #wt21 Discord!</div>

@@ -299,6 +299,10 @@ header a {
   z-index: -1;
 }
 
+.discord-widget.open {
+  width: 275px;
+}
+
 .discord-widget:hover {
   width: 275px;
 }
@@ -313,6 +317,10 @@ header a {
     line-height: 65px;
     font-size: 12px;
     width: 185px;
+  }
+
+  .discord-widget.open {
+    width: 225px;
   }
 
   .discord-widget:hover {
@@ -330,6 +338,10 @@ header a {
     line-height: 50px;
     font-size: 12px;
     width: 165px;
+  }
+
+  .discord-widget.open {
+    width: 200px;
   }
 
   .discord-widget:hover {
