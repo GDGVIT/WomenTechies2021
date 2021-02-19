@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import dscLogo from './../assets/dsc-logo.png'
+import discord from './../assets/discord.png'
 import Modal from './Modal'
 
 const Nav = ({ active, introRef, aboutRef, hackRef, visionRef, sponsorsRef, contactRef }) => {
@@ -59,6 +60,12 @@ const Nav = ({ active, introRef, aboutRef, hackRef, visionRef, sponsorsRef, cont
           <div className='line3' />
         </div>
       </header>
+      <div className='discord-widget'>
+        <a href='https://discord.gg/dEqfTTPPR4' target='_blank' rel='noreferrer'>
+          <img src={discord} alt='Discord' className='discord-logo' />
+          <div className='discord-bg'>Join the #wt21 Discord!</div>
+        </a>
+      </div>
     </>
   )
 }

@@ -236,6 +236,107 @@ header a {
   }
 }
 
+.discord-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 85px;
+  height: 85px;
+  display: flex;
+  overflow: hidden;
+  z-index: 2;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+.discord-widget a {
+  width: 350%;
+  height: 100%;
+}
+
+.discord-logo {
+  height: 100%;
+}
+
+.discord-bg {
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+  display: inline-block;
+  line-height: 85px;
+  text-align: left;
+  vertical-align: bottom;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  width: 250px;
+  height: 100%;
+}
+
+.discord-bg::before {
+  content: "";
+  background-color: var(--Pink);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.discord-bg::after {
+  content: "";
+  background: url(./assets/intro-img.svg);
+  background-position: 50% 20%;
+  background-size: 125%;
+  background-color: var(--Pink);
+  opacity: 0.4;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.discord-widget:hover {
+  width: 275px;
+}
+
+@media screen and (max-width: 768px) {
+  .discord-widget {
+    width: 65px;
+    height: 65px;
+  }
+
+  .discord-bg {
+    line-height: 65px;
+    font-size: 12px;
+    width: 185px;
+  }
+
+  .discord-widget:hover {
+    width: 225px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .discord-widget {
+    width: 50px;
+    height: 50px;
+  }
+
+  .discord-bg {
+    line-height: 50px;
+    font-size: 12px;
+    width: 165px;
+  }
+
+  .discord-widget:hover {
+    width: 200px;
+  }
+}
+
 /* Modal */
 .modal {
   position: fixed;
@@ -592,7 +693,7 @@ header a {
 }
 
 .sponsors-gallery div {
-  display: block;
+  display: grid;
 }
 
 .sponsors-gallery img {
