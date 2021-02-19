@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+@import url('http://fonts.cdnfonts.com/css/metropolis-2');
 
 * {
   box-sizing: border-box;
@@ -510,6 +511,13 @@ header a {
   transition: all 0.1s ease-in-out;
 }
 
+.rsvp.button {
+  width: 100px;
+  height: 2rem;
+  font-size: 1rem;
+  background-color: #ff993b;
+}
+
 .vision {
   position: relative;
   margin: 75px 0;
@@ -708,6 +716,10 @@ header a {
     width: 300px;
   }
 
+  .rsvp.button {
+    width: 150px;
+  }
+
   .first-img img {
     right: -40%;
   }
@@ -776,8 +788,13 @@ header a {
     margin: 5px 0;
     padding: 0 5px;
     border-radius: 25px;
-    font-size: 18px;
+    font-size: 23px;
     margin-top: 0;
+  }
+
+  .rsvp.button {
+    width: 150px;
+    font-size: 20px;
   }
 
   .first-img {
@@ -996,6 +1013,7 @@ header a {
 
   .first-logo {
     max-width: none;
+    margin-bottom: 15px;
   }
 
   .first-logo svg {
@@ -1017,6 +1035,10 @@ header a {
     height: 50px;
     max-width: 350px;
     border-radius: 25px;
+    font-size: 25px;
+  }
+
+  .rsvp.button {
     font-size: 20px;
   }
 
