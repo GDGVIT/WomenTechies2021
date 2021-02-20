@@ -97,7 +97,8 @@ header a {
   border-bottom: var(--Pink) solid 5px;
 }
 
-.nav-links li .nav-about:hover {
+.nav-links li .nav-about:hover,
+.nav-links li .nav-faq:hover {
   color: var(--Purple);
   border-bottom: var(--Purple) solid 5px;
 }
@@ -119,7 +120,8 @@ header a {
   border-bottom: var(--Pink) solid 5px;
 }
 
-.nav-links li .nav-about-active {
+.nav-links li .nav-about-active,
+.nav-links li .nav-faq-active {
   color: var(--Purple);
   border-bottom: var(--Purple) solid 5px;
 }
@@ -214,7 +216,8 @@ header a {
     color: var(--Pink);
   }
 
-  .nav-links li .nav-about-active:hover {
+  .nav-links li .nav-about-active:hover,
+  .nav-links li .nav-faq-active:hover {
     color: var(--Purple);
   }
 
@@ -732,6 +735,22 @@ header a {
   margin-right: 4px;
 }
 
+.faq {
+  width: 80vw;
+  margin: 40px auto;
+}
+
+.faq .faq-title {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  padding: 5px 0;
+  color: var(--Purple);
+  font-size: 30px;
+  font-weight: 800;
+  border-bottom: solid 3px;
+}
+
 .contact {
   margin-top: 40px;
   background-color: #ffeef5;
@@ -1045,6 +1064,7 @@ header a {
 
   .home .sponsors {
     flex-direction: column;
+    padding: 30px 0;
   }
 
   .sponsors .sponsors-title {
@@ -1053,7 +1073,6 @@ header a {
 
   .sponsors .sponsors-gallery {
     grid-template-columns: 33.33% 33.33% 33.33%;
-    padding: 0 30px;
   }
 
   .sponsors .sponsors-gallery div {
@@ -1070,6 +1089,15 @@ header a {
 
   .download.button:hover {
     background-color: #f58e2e;
+  }
+
+  .home .faq {
+    flex-direction: column;
+    margin: 50px auto;
+  }
+
+  .faq .faq-title {
+    font-size: 35px;
   }
 
   .home .contact {
@@ -1264,6 +1292,10 @@ header a {
     font-size: 20px;
     padding: 0 15px;
     background-color: #ff993b;
+  }
+
+  .faq .faq-title {
+    font-size: 40px;
   }
 
   .contact .contact-title {

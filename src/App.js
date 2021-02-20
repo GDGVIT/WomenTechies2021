@@ -10,11 +10,12 @@ function App () {
   const visionRef = useRef(null)
   const sponsorsRef = useRef(null)
   const contactRef = useRef(null)
+  const faqRef = useRef(null)
 
   return (
     <>
-      <Nav active={active} introRef={introRef.current} aboutRef={aboutRef.current} hackRef={hackRef.current} visionRef={visionRef.current} sponsorsRef={sponsorsRef.current} contactRef={contactRef.current} />
-      <Home setActive={setActive} introRef={introRef} aboutRef={aboutRef} hackRef={hackRef} visionRef={visionRef} sponsorsRef={sponsorsRef} contactRef={contactRef} />
+      <Nav active={active} introRef={introRef.current} aboutRef={aboutRef.current} hackRef={hackRef.current} visionRef={visionRef.current} sponsorsRef={sponsorsRef.current} contactRef={contactRef.current} faqRef={faqRef.current} />
+      <Home setActive={setActive} introRef={introRef} aboutRef={aboutRef} hackRef={hackRef} visionRef={visionRef} sponsorsRef={sponsorsRef} contactRef={contactRef} faqRef={faqRef} />
     </>
   )
 }
