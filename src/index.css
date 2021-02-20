@@ -629,6 +629,7 @@ header a {
   height: 2rem;
   font-size: 1rem;
   background-color: #ff993b;
+  margin-top: 10px;
 }
 
 .vision {
@@ -807,6 +808,14 @@ header a {
   transition: all 0.1s ease;
 }
 
+.sponsors .sponsors-gallery div:last-child {
+  grid-column: 1 / -1;
+}
+
+.sponsors .sponsors-gallery div:last-child img {
+  max-width: 50%;
+}
+
 @media screen and (min-width: 400px) {
   .first-soon {
     font-size: 3rem;
@@ -908,6 +917,7 @@ header a {
   .rsvp.button {
     width: 150px;
     font-size: 20px;
+    margin-top: 10px;
   }
 
   .first-img {
@@ -1051,11 +1061,11 @@ header a {
   }
 
   .sponsors .sponsors-gallery div:last-child {
-    grid-column: 1 / -1;
+    grid-column: initial;
   }
 
   .sponsors .sponsors-gallery div:last-child img {
-    max-width: 25%;
+    max-width: 100%;
   }
 
   .download.button:hover {
@@ -1103,19 +1113,12 @@ header a {
     grid-template-columns: 25% 25% 25% 25%;
   }
 
-  .sponsors .sponsors-gallery div:nth-last-child(2) {
-    grid-column-start: 2;
-    grid-column-end: 3;
-  }
-
   .sponsors .sponsors-gallery div:last-child {
-    grid-column-start: 3;
-    grid-column-end: 4;
+    grid-column: -1 / 1;
   }
 
-  .sponsors .sponsors-gallery div:last-child img,
-  .sponsors .sponsors-gallery div:nth-last-child(2) img {
-    max-width: 100%;
+  .sponsors .sponsors-gallery div:last-child img {
+    max-width: 50%;
   }
 }
 
