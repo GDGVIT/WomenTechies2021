@@ -4,15 +4,19 @@ import 'accordion-js/dist/accordion.min.css'
 
 const FAQ = React.forwardRef(({ setFAQ }, ref) => {
   const accRef = useRef(null)
+  /* eslint-disable no-unused-vars */
   useEffect(() => {
-    const Acc = new Accordion(accRef.current)
+    const Acc = new Accordion(accRef.current, {
+      duration: 200
+    })
   }, [])
+  /* eslint-enable no-unused-vars */
   return (
     <div className='faq' id='faq' ref={ref}>
       <div className='faq-title'>FAQ's</div>
       <div class='accordion-container' ref={accRef}>
 
-        <div className='ac'>
+        <div className='ac yellow'>
           <h2 className='ac-header'>
             <button className='ac-trigger'>Do I need to pay any money to register for the Hackathon?</button>
           </h2>
@@ -21,7 +25,7 @@ const FAQ = React.forwardRef(({ setFAQ }, ref) => {
           </div>
         </div>
 
-        <div className='ac'>
+        <div className='ac pink'>
           <h2 className='ac-header'>
             <button className='ac-trigger'>Do I need to have any specific qualifications to be a participant for the Hackathon?</button>
           </h2>
@@ -30,7 +34,7 @@ const FAQ = React.forwardRef(({ setFAQ }, ref) => {
           </div>
         </div>
 
-        <div className='ac'>
+        <div className='ac purple'>
           <h2 className='ac-header'>
             <button className='ac-trigger'>Is it necessary for all participants to belong to the same university?</button>
           </h2>
@@ -39,7 +43,7 @@ const FAQ = React.forwardRef(({ setFAQ }, ref) => {
           </div>
         </div>
 
-        <div className='ac'>
+        <div className='ac yellow'>
           <h2 className='ac-header'>
             <button className='ac-trigger'>I’m interested to participate but I am unable to find a team. What should I do?</button>
           </h2>
@@ -48,7 +52,7 @@ const FAQ = React.forwardRef(({ setFAQ }, ref) => {
           </div>
         </div>
 
-        <div className='ac'>
+        <div className='ac pink'>
           <h2 className='ac-header'>
             <button className='ac-trigger'>How do I submit what I have made for the Hackathon?</button>
           </h2>
@@ -57,7 +61,7 @@ const FAQ = React.forwardRef(({ setFAQ }, ref) => {
           </div>
         </div>
 
-        <div className='ac'>
+        <div className='ac purple'>
           <h2 className='ac-header'>
             <button className='ac-trigger'>Do we need to have the entire idea fully working?</button>
           </h2>
@@ -66,7 +70,7 @@ const FAQ = React.forwardRef(({ setFAQ }, ref) => {
           </div>
         </div>
 
-        <div className='ac'>
+        <div className='ac yellow'>
           <h2 className='ac-header'>
             <button className='ac-trigger'>How is the environment? Will your environment support any language? Will you provide any IDE and DB for us to work on ideas?</button>
           </h2>
@@ -75,7 +79,7 @@ const FAQ = React.forwardRef(({ setFAQ }, ref) => {
           </div>
         </div>
 
-        <div className='ac'>
+        <div className='ac pink'>
           <h2 className='ac-header'>
             <button className='ac-trigger'>Does one have to be online and available for the entire duration of the Hackathon?</button>
           </h2>
@@ -84,7 +88,7 @@ const FAQ = React.forwardRef(({ setFAQ }, ref) => {
           </div>
         </div>
 
-        <div className='ac'>
+        <div className='ac purple'>
           <h2 className='ac-header'>
             <button className='ac-trigger'>Since there is no specific technology mentioned, are there any restrictions on using several pre-built libraries?</button>
           </h2>
@@ -93,7 +97,7 @@ const FAQ = React.forwardRef(({ setFAQ }, ref) => {
           </div>
         </div>
 
-        <div className='ac'>
+        <div className='ac yellow'>
           <h2 className='ac-header'>
             <button className='ac-trigger'>Do I need to give a demo for the product that I have built?</button>
           </h2>
@@ -102,7 +106,7 @@ const FAQ = React.forwardRef(({ setFAQ }, ref) => {
           </div>
         </div>
 
-        <div className='ac'>
+        <div className='ac pink'>
           <h2 className='ac-header'>
             <button className='ac-trigger'>A fully developed application needs to have a solid backend for data storage like SQL, SharePoint etc. since it's online, is it accepted to show only the prototype of it?</button>
           </h2>
@@ -111,7 +115,7 @@ const FAQ = React.forwardRef(({ setFAQ }, ref) => {
           </div>
         </div>
 
-        <div className='ac'>
+        <div className='ac purple'>
           <h2 className='ac-header'>
             <button className='ac-trigger'>If it is a team submission, does that mean all team members will have access to work at the same time?</button>
           </h2>
@@ -120,9 +124,9 @@ const FAQ = React.forwardRef(({ setFAQ }, ref) => {
           </div>
         </div>
 
-        <div className='ac'>
+        <div className='ac yellow'>
           <h2 className='ac-header'>
-            <button className='ac-trigger'>Who will own the IP(Intellectual Property) Rights to the product that I have built?</button>
+            <button className='ac-trigger'>Who will own the IP (Intellectual Property) Rights to the product that I have built?</button>
           </h2>
           <div className='ac-panel'>
             <p className='ac-text'>The developer/developers of the web/mobile application will have all rights and own the IP of the product. However, all code needs to be in the public domain (open source) so that it can be evaluated by the judges.</p>

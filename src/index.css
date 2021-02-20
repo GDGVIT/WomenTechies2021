@@ -751,6 +751,89 @@ header a {
   border-bottom: solid 3px;
 }
 
+.accordion-container {
+  border: solid 1px #f3f3f3 !important;
+  border-radius: 10px !important;
+}
+
+.faq .ac {
+  width: 80vw;
+  margin: 0 !important;
+  align-items: flex-start;
+  border-bottom: 1px solid #f3f3f3 !important;
+}
+
+.faq #ac-0 {
+  border-top-left-radius: 10px !important;
+  border-top-right-radius: 10px !important;
+}
+
+.faq #ac-12 {
+  border-bottom-left-radius: 10px !important;
+  border-bottom-right-radius: 10px !important;
+}
+
+.ac-header {
+  padding: 10px 25px !important;
+  width: 100%;
+}
+
+.ac .ac-trigger {
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 600 !important;
+}
+
+.ac .ac-trigger:focus {
+  outline: none !important;
+}
+
+.ac.yellow .ac-trigger {
+  color: #ff993b !important;
+}
+
+.ac.pink .ac-trigger {
+  color: var(--Pink) !important;
+}
+
+.ac.purple .ac-trigger {
+  color: var(--Purple) !important;
+}
+
+.ac .ac-trigger::after {
+  content: '▾' !important; /* Unicode character for "plus" sign (+) */
+  float: right !important;
+  margin-left: 5px !important;
+}
+
+.ac.is-active > .ac-header .ac-trigger::after {
+  content: "▴" !important; /* Unicode character for "minus" sign (-) */
+}
+
+.ac .ac-panel {
+  width: 100% !important;
+  display: flex;
+  align-items: flex-start;
+}
+
+.ac.yellow .ac-panel {
+  background-color: #ffefe1 !important;
+}
+
+.ac.pink .ac-panel {
+  background-color: #ffe1ed !important;
+}
+
+.ac.purple .ac-panel {
+  background-color: #f5dfff !important;
+}
+
+.ac .ac-panel .ac-text {
+  padding: 10px 35px 10px 35px !important;
+  margin: 1px !important;
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 400 !important;
+}
+
 .contact {
   margin-top: 40px;
   background-color: #ffeef5;
@@ -892,6 +975,22 @@ header a {
 
   .contact .social-gallery {
     grid-template-columns: 25% 25% 25% 25%;
+  }
+
+  .sponsors .sponsors-gallery {
+    grid-template-columns: 33.33% 33.33% 33.33%;
+  }
+
+  .sponsors .sponsors-gallery div {
+    margin: 0 30px;
+  }
+
+  .sponsors .sponsors-gallery div:last-child {
+    grid-column: initial;
+  }
+
+  .sponsors .sponsors-gallery div:last-child img {
+    max-width: 100%;
   }
 }
 
@@ -1065,26 +1164,6 @@ header a {
   .home .sponsors {
     flex-direction: column;
     padding: 30px 0;
-  }
-
-  .sponsors .sponsors-title {
-    font-size: 35px;
-  }
-
-  .sponsors .sponsors-gallery {
-    grid-template-columns: 33.33% 33.33% 33.33%;
-  }
-
-  .sponsors .sponsors-gallery div {
-    margin: 0 30px;
-  }
-
-  .sponsors .sponsors-gallery div:last-child {
-    grid-column: initial;
-  }
-
-  .sponsors .sponsors-gallery div:last-child img {
-    max-width: 100%;
   }
 
   .download.button:hover {
