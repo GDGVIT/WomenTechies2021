@@ -761,8 +761,6 @@ header a {
   border-bottom: 1px solid #f3f3f3 !important;
 }
 
-
-
 .faq #ac-0 {
   border-top-left-radius: 10px !important;
   border-top-right-radius: 10px !important;
@@ -800,8 +798,8 @@ header a {
 }
 
 .ac-text{
-  margin: 0!important;
-  padding: 0!important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .ac .ac-trigger::after {
@@ -833,9 +831,6 @@ header a {
 }
 
 .ac .ac-panel .ac-text {
-  /* padding: 10px 35px 10px 35px !important; */
-  /* margin: 1px !important; */
-  
   font-family: 'Poppins', sans-serif !important;
   font-weight: 400 !important;
 }
@@ -843,7 +838,7 @@ header a {
 .text {
   display: block;
   box-sizing: border-box;
-  margin: 30px 35px!important;
+  margin: 30px 35px !important;
   padding: 10px 0px;
 }
 
