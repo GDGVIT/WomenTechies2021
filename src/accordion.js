@@ -1,7 +1,7 @@
 (function (window) {
   let uniqueId = 0
 
-  const Accordion = function Accordion(selectorOrElement, userOptions) {
+  const Accordion = function Accordion (selectorOrElement, userOptions) {
     const _this5 = this
     const _this = this
     let eventsAttached = false
@@ -18,7 +18,7 @@
     }
 
     const core = {
-      init: function init() {
+      init: function init () {
         const _this2 = this
         const defaults = {
           duration: 600, // animation duration in ms {number}
@@ -30,10 +30,10 @@
           triggerClass: 'ac-trigger', // trigger class {string}
           panelClass: 'ac-panel', // panel class {string}
           activeClass: 'is-active', // active element class {string}
-          beforeOpen: function beforeOpen() { }, // calls before the item is opened {function}
-          onOpen: function onOpen() { }, // calls when the item is opened {function}
-          beforeClose: function beforeClose() { }, // calls before the item is closed {function}
-          onClose: function onClose() { } // calls when the item is closed {function}
+          beforeOpen: function beforeOpen () { }, // calls before the item is opened {function}
+          onOpen: function onOpen () { }, // calls when the item is opened {function}
+          beforeClose: function beforeClose () { }, // calls before the item is closed {function}
+          onClose: function onClose () { } // calls when the item is closed {function}
         }
 
         // Extend default options
@@ -67,7 +67,7 @@
         _this.attachEvents()
       },
 
-      setTransition: function setTransition(element) {
+      setTransition: function setTransition (element) {
         const clear = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false
         const _this$options2 = this.options
         const duration = _this$options2.duration
@@ -134,7 +134,7 @@
         trigger.setAttribute('aria-disabled', ariaDisabled)
       },
 
-      removeARIA: function removeARIA(element) {
+      removeARIA: function removeARIA (element) {
         const _this$options7 = this.options
         const ariaEnabled = _this$options7.ariaEnabled
         const triggerClass = _this$options7.triggerClass
@@ -153,24 +153,24 @@
         panel.removeAttribute('aria-labelledby')
       },
 
-      focus: function focus(e, element) {
+      focus: function focus (e, element) {
         e.preventDefault()
         const triggerClass = this.options.triggerClass
         const trigger = element.querySelector('.'.concat(triggerClass))
         trigger.focus()
       },
 
-      focusFirstElement: function focusFirstElement(e) {
+      focusFirstElement: function focusFirstElement (e) {
         this.focus(e, this.firstElement)
         this.currFocusedIdx = 0
       },
 
-      focusLastElement: function focusLastElement(e) {
+      focusLastElement: function focusLastElement (e) {
         this.focus(e, this.lastElement)
         this.currFocusedIdx = this.elements.length - 1
       },
 
-      focusNextElement: function focusNextElement(e) {
+      focusNextElement: function focusNextElement (e) {
         const nextElIdx = this.currFocusedIdx + 1
         if (nextElIdx > this.elements.length - 1) return this.focusFirstElement(e)
 
@@ -178,7 +178,7 @@
         this.currFocusedIdx = nextElIdx
       },
 
-      focusPrevElement: function focusPrevElement(e) {
+      focusPrevElement: function focusPrevElement (e) {
         const prevElIdx = this.currFocusedIdx - 1
         if (prevElIdx < 0) return this.focusLastElement(e)
 
@@ -186,7 +186,7 @@
         this.currFocusedIdx = prevElIdx
       },
 
-      showElement: function showElement(element) {
+      showElement: function showElement (element) {
         const calcHeight = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true
         const _this$options8 = this.options
         const panelClass = _this$options8.panelClass
@@ -208,7 +208,7 @@
         this.updateARIA(element, { ariaExpanded: true, ariaDisabled: !collapse })
       },
 
-      closeElement: function closeElement(element) {
+      closeElement: function closeElement (element) {
         const calcHeight = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true
         const _this$options9 = this.options
         const panelClass = _this$options9.panelClass
@@ -238,7 +238,7 @@
         }
       },
 
-      toggleElement: function toggleElement(element) {
+      toggleElement: function toggleElement (element) {
         const _this$options10 = this.options
         const activeClass = _this$options10.activeClass
         const collapse = _this$options10.collapse
@@ -248,7 +248,7 @@
         return isActive ? this.closeElement(element) : this.showElement(element)
       },
 
-      closeElements: function closeElements() {
+      closeElements: function closeElements () {
         const _this3 = this
         const _this$options11 = this.options
         const activeClass = _this$options11.activeClass
@@ -264,7 +264,7 @@
         })
       },
 
-      handleClick: function handleClick(e) {
+      handleClick: function handleClick (e) {
         const _this4 = this
         const target = e.currentTarget
         // eslint-disable-next-line
@@ -279,7 +279,7 @@
         })
       },
 
-      handleKeydown: function handleKeydown(e) {
+      handleKeydown: function handleKeydown (e) {
         const KEYS = {
           ARROW_UP: 38,
           ARROW_DOWN: 40,
@@ -305,7 +305,7 @@
         }
       },
 
-      handleTransitionEnd: function handleTransitionEnd(e) {
+      handleTransitionEnd: function handleTransitionEnd (e) {
         if (e.propertyName !== 'height') return
         const _this$options12 = this.options
         const onOpen = _this$options12.onOpen
@@ -413,7 +413,7 @@
       eventsAttached = true
     }
 
-    const isWebkit = function isWebkit(property) {
+    const isWebkit = function isWebkit (property) {
       if (typeof document.documentElement.style[property] === 'string') {
         return property
       }
@@ -424,7 +424,7 @@
       return property
     }
 
-    const capitalizeFirstLetter = function capitalizeFirstLetter(string) {
+    const capitalizeFirstLetter = function capitalizeFirstLetter (string) {
       return string.charAt(0).toUpperCase() + string.slice(1)
     }
 
