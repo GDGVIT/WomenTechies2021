@@ -20,7 +20,7 @@ const FAQ = React.forwardRef(({ setFAQ }, ref) => {
             <button className='ac-trigger'>Do I need to pay any money to register for the Hackathon?</button>
           </h2>
           <div className='ac-panel'>
-            <p className=''><span className='text'>No. You do not have to pay anything to anyone to register yourself for any Hackathon on HackerEarth</span></p>
+            <p className=''><span className='text'>No. You do not have to pay anything to anyone to register yourself for any Hackathon on Devfolio</span></p>
           </div>
         </div>
 
@@ -83,7 +83,7 @@ const FAQ = React.forwardRef(({ setFAQ }, ref) => {
             <button className='ac-trigger'>Does one have to be online and available for the entire duration of the Hackathon?</button>
           </h2>
           <div className='ac-panel'>
-            <p className=''><span className='text'>No, one does not need to be logged in on HackerEarth or be online for the entire duration. You can develop the application on your local system based on the given themes and then submit it on HackerEarth, on the specific challenge page.</span></p>
+            <p className=''><span className='text'>No, one does not need to be online for the entire duration. You can develop the application on your local system based on the given themes and then submit it on Devfolio, on the specific challenge page.</span></p>
           </div>
         </div>
 
@@ -119,7 +119,7 @@ const FAQ = React.forwardRef(({ setFAQ }, ref) => {
             <button className='ac-trigger'>If it is a team submission, does that mean all team members will have access to work at the same time?</button>
           </h2>
           <div className='ac-panel'>
-            <p className=''><span className='text'>Yes, all team members can log in from their account and do application submission on HackerEarth.</span></p>
+            <p className=''><span className='text'>Yes, all team members can log in from their account and do application submission on Devfolio.</span></p>
           </div>
         </div>
 
