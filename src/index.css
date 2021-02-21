@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
-@import url('http://fonts.cdnfonts.com/css/metropolis-2');
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap"); */
+/* @import url('http://fonts.cdnfonts.com/css/metropolis-2'); */
 
 * {
   box-sizing: border-box;
@@ -763,6 +763,8 @@ header a {
   border-bottom: 1px solid #f3f3f3 !important;
 }
 
+
+
 .faq #ac-0 {
   border-top-left-radius: 10px !important;
   border-top-right-radius: 10px !important;
@@ -799,6 +801,11 @@ header a {
   color: var(--Purple) !important;
 }
 
+.ac-text{
+  margin: 0!important;
+  padding: 0!important;
+}
+
 .ac .ac-trigger::after {
   content: '▾' !important; /* Unicode character for "plus" sign (+) */
   float: right !important;
@@ -828,10 +835,18 @@ header a {
 }
 
 .ac .ac-panel .ac-text {
-  padding: 10px 35px 10px 35px !important;
-  margin: 1px !important;
+  /* padding: 10px 35px 10px 35px !important; */
+  /* margin: 1px !important; */
+  
   font-family: 'Poppins', sans-serif !important;
   font-weight: 400 !important;
+}
+
+.text{
+  display: block;
+  box-sizing: border-box;
+  margin: 30px 35px!important;
+  padding: 10px 0px;
 }
 
 .contact {
