@@ -78,7 +78,7 @@
         el.style[transition] = clear ? null : ''.concat(duration, 'ms')
       },
 
-      generateIDs: function generateIDs(element) {
+      generateIDs: function generateIDs (element) {
         const _this$options3 = this.options
         const triggerClass = _this$options3.triggerClass
         const panelClass = _this$options3.panelClass
@@ -90,7 +90,7 @@
         panel.setAttribute('id', 'ac-panel-'.concat(uniqueId))
       },
 
-      removeIDs: function removeIDs(element) {
+      removeIDs: function removeIDs (element) {
         const _this$options4 = this.options
         const triggerClass = _this$options4.triggerClass
         const panelClass = _this$options4.panelClass
@@ -102,7 +102,7 @@
         panel.removeAttribute('id')
       },
 
-      setARIA: function setARIA(element) {
+      setARIA: function setARIA (element) {
         const _this$options5 = this.options
         const ariaEnabled = _this$options5.ariaEnabled
         const triggerClass = _this$options5.triggerClass
@@ -121,7 +121,7 @@
         panel.setAttribute('aria-labelledby', 'ac-trigger-'.concat(uniqueId))
       },
 
-      updateARIA: function updateARIA(element, _ref) {
+      updateARIA: function updateARIA (element, _ref) {
         const ariaExpanded = _ref.ariaExpanded
         const ariaDisabled = _ref.ariaDisabled
         const _this$options6 = this.options
