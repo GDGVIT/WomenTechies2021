@@ -201,7 +201,7 @@
 
         requestAnimationFrame(function () {
           requestAnimationFrame(function () {
-            panel.style.height = calcHeight ? ''.concat(height, 'px') : 'auto'
+            panel.style.height = calcHeight ? ''.concat(height * 2, 'px') : 'auto'
           })
         })
 
@@ -225,6 +225,7 @@
           // Animation [X]px => 0
           requestAnimationFrame(function () {
             panel.style.height = ''.concat(height, 'px')
+            // panel.style.height = 'auto'
 
             requestAnimationFrame(function () {
               panel.style.height = 0
