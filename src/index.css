@@ -797,7 +797,7 @@ header a {
   color: var(--Purple) !important;
 }
 
-.ac-text{
+.ac-text {
   margin: 0 !important;
   padding: 0 !important;
 }
@@ -838,8 +838,8 @@ header a {
 .text {
   display: block;
   box-sizing: border-box;
-  margin: 30px 35px !important;
-  padding: 10px 0px;
+  margin: 30px 25px !important;
+  padding: 10px;
 }
 
 .contact {
