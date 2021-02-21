@@ -1,11 +1,11 @@
 import React, { useEffect, useRef } from 'react'
 import Accordion from '../accordion.js'
 
-const FAQ=React.forwardRef(({ setFAQ }, ref) => {
-  const accRef=useRef(null)
+const FAQ = React.forwardRef(({ setFAQ }, ref) => {
+  const accRef = useRef(null)
   /* eslint-disable no-unused-vars */
   useEffect(() => {
-    const Acc=new Accordion(accRef.current, {
+    const Acc = new Accordion(accRef.current, {
       duration: 200
     })
   }, [])
