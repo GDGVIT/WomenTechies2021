@@ -1,10 +1,12 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import dscLogo from './../assets/dsc-logo.png'
+import discord from './../assets/discord.png'
 import Modal from './Modal'
 
-const Nav = ({ active, introRef, aboutRef, hackRef, visionRef, sponsorsRef, contactRef }) => {
+const Nav = ({ active, introRef, aboutRef, hackRef, visionRef, sponsorsRef, contactRef, faqRef }) => {
   const [menuOpen, setMenuOpen] = useState(false)
   const [show, setShow] = useState(false)
+  const [discoom, setDiscoom] = useState(true)
 
   const onClick = () => setMenuOpen(!menuOpen)
 
@@ -28,10 +30,21 @@ const Nav = ({ active, introRef, aboutRef, hackRef, visionRef, sponsorsRef, cont
     if (menuOpen) onClick()
     sponsorsRef.scrollIntoView({ behavior: 'smooth' })
   }
+  const faqScroll = () => {
+    if (menuOpen) onClick()
+    faqRef.scrollIntoView({ behavior: 'smooth' })
+  }
   const contactScroll = () => {
     if (menuOpen) onClick()
     contactRef.scrollIntoView({ behavior: 'smooth' })
   }
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setDiscoom(false)
+    }, 3000)
+    return () => clearTimeout(timer)
+  }, [discoom])
 
   return (
     <>
@@ -47,6 +60,7 @@ const Nav = ({ active, introRef, aboutRef, hackRef, visionRef, sponsorsRef, cont
             {/* <li><NavLink to="timeline" exact activeClassName='nav-active' onClick={() => setShow(true)}>Timeline</NavLink></li> */}
             {/* <li><NavLink to="speakers" exact activeClassName='nav-active' onClick={() => setShow(true)}>Speakers</NavLink></li> */}
             <li><span className={`nav-sponsors ${(active === 'sponsors') ? 'nav-sponsors-active' : ''}`} onClick={sponsorsScroll}>Sponsors</span></li>
+            <li><span className={`nav-faq ${(active === 'faq') ? 'nav-faq-active' : ''}`} onClick={faqScroll}>FAQ's</span></li>
             <li><span className={`nav-contact ${(active === 'contact') ? 'nav-contact-active' : ''}`} onClick={contactScroll}>Contact Us</span></li>
             {/* <li><NavLink to="contact-us" exact activeClassName='nav-active' onClick={() => setShow(true)}>Contact Us</NavLink></li> */}
             {/* <li><NavLink to="faq" exact activeClassName='active' onClick={() => setShow(true)}>FAQ's</NavLink></li> */}
@@ -59,6 +73,12 @@ const Nav = ({ active, introRef, aboutRef, hackRef, visionRef, sponsorsRef, cont
           <div className='line3' />
         </div>
       </header>
+      <div className={`discord-widget ${discoom && 'open'}`}>
+        <a href='https://discord.gg/dEqfTTPPR4' target='_blank' rel='noreferrer'>
+          <img src={discord} alt='Discord' className='discord-logo' />
+          <div className='discord-bg'>Join the #wt21 Discord!</div>
+        </a>
+      </div>
     </>
   )
 }

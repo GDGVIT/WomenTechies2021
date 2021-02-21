@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+@import url('http://fonts.cdnfonts.com/css/metropolis-2');
 
 * {
   box-sizing: border-box;
@@ -96,7 +97,8 @@ header a {
   border-bottom: var(--Pink) solid 5px;
 }
 
-.nav-links li .nav-about:hover {
+.nav-links li .nav-about:hover,
+.nav-links li .nav-faq:hover {
   color: var(--Purple);
   border-bottom: var(--Purple) solid 5px;
 }
@@ -118,7 +120,8 @@ header a {
   border-bottom: var(--Pink) solid 5px;
 }
 
-.nav-links li .nav-about-active {
+.nav-links li .nav-about-active,
+.nav-links li .nav-faq-active {
   color: var(--Purple);
   border-bottom: var(--Purple) solid 5px;
 }
@@ -213,7 +216,8 @@ header a {
     color: var(--Pink);
   }
 
-  .nav-links li .nav-about-active:hover {
+  .nav-links li .nav-about-active:hover,
+  .nav-links li .nav-faq-active:hover {
     color: var(--Purple);
   }
 
@@ -232,6 +236,119 @@ header a {
   .hamburger {
     display: block;
     cursor: pointer;
+  }
+}
+
+.discord-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 85px;
+  height: 85px;
+  display: flex;
+  overflow: hidden;
+  z-index: 2;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+.discord-widget a {
+  width: 350%;
+  height: 100%;
+}
+
+.discord-logo {
+  height: 100%;
+}
+
+.discord-bg {
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+  display: inline-block;
+  line-height: 85px;
+  text-align: left;
+  vertical-align: bottom;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  width: 250px;
+  height: 100%;
+}
+
+.discord-bg::before {
+  content: "";
+  background-color: var(--Pink);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.discord-bg::after {
+  content: "";
+  background: url(./assets/intro-img.svg);
+  background-position: 50% 20%;
+  background-size: 125%;
+  background-color: var(--Pink);
+  opacity: 0.4;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.discord-widget.open {
+  width: 275px;
+}
+
+.discord-widget:hover {
+  width: 275px;
+}
+
+@media screen and (max-width: 768px) {
+  .discord-widget {
+    width: 65px;
+    height: 65px;
+  }
+
+  .discord-bg {
+    line-height: 65px;
+    font-size: 12px;
+    width: 185px;
+  }
+
+  .discord-widget.open {
+    width: 225px;
+  }
+
+  .discord-widget:hover {
+    width: 225px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .discord-widget {
+    width: 50px;
+    height: 50px;
+  }
+
+  .discord-bg {
+    line-height: 50px;
+    font-size: 12px;
+    width: 165px;
+  }
+
+  .discord-widget.open {
+    width: 200px;
+  }
+
+  .discord-widget:hover {
+    width: 200px;
   }
 }
 
@@ -510,6 +627,14 @@ header a {
   transition: all 0.1s ease-in-out;
 }
 
+.rsvp.button {
+  width: 100px;
+  height: 2rem;
+  font-size: 1rem;
+  background-color: #ff993b;
+  margin-top: 10px;
+}
+
 .vision {
   position: relative;
   margin: 75px 0;
@@ -584,7 +709,7 @@ header a {
 }
 
 .sponsors-gallery div {
-  display: block;
+  display: grid;
 }
 
 .sponsors-gallery img {
@@ -608,6 +733,105 @@ header a {
 
 .download.button svg {
   margin-right: 4px;
+}
+
+.faq {
+  width: 80vw;
+  margin: 40px auto;
+}
+
+.faq .faq-title {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  padding: 5px 0;
+  color: var(--Purple);
+  font-size: 30px;
+  font-weight: 800;
+  border-bottom: solid 3px;
+}
+
+.accordion-container {
+  border: solid 1px #f3f3f3 !important;
+  border-radius: 10px !important;
+}
+
+.faq .ac {
+  width: 80vw;
+  margin: 0 !important;
+  align-items: flex-start;
+  border-bottom: 1px solid #f3f3f3 !important;
+}
+
+.faq #ac-0 {
+  border-top-left-radius: 10px !important;
+  border-top-right-radius: 10px !important;
+}
+
+.faq #ac-12 {
+  border-bottom-left-radius: 10px !important;
+  border-bottom-right-radius: 10px !important;
+}
+
+.ac-header {
+  padding: 10px 25px !important;
+  width: 100%;
+}
+
+.ac .ac-trigger {
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 600 !important;
+}
+
+.ac .ac-trigger:focus {
+  outline: none !important;
+}
+
+.ac.yellow .ac-trigger {
+  color: #ff993b !important;
+}
+
+.ac.pink .ac-trigger {
+  color: var(--Pink) !important;
+}
+
+.ac.purple .ac-trigger {
+  color: var(--Purple) !important;
+}
+
+.ac .ac-trigger::after {
+  content: '▾' !important; /* Unicode character for "plus" sign (+) */
+  float: right !important;
+  margin-left: 5px !important;
+}
+
+.ac.is-active > .ac-header .ac-trigger::after {
+  content: "▴" !important; /* Unicode character for "minus" sign (-) */
+}
+
+.ac .ac-panel {
+  width: 100% !important;
+  display: flex;
+  align-items: flex-start;
+}
+
+.ac.yellow .ac-panel {
+  background-color: #ffefe1 !important;
+}
+
+.ac.pink .ac-panel {
+  background-color: #ffe1ed !important;
+}
+
+.ac.purple .ac-panel {
+  background-color: #f5dfff !important;
+}
+
+.ac .ac-panel .ac-text {
+  padding: 10px 35px 10px 35px !important;
+  margin: 1px !important;
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 400 !important;
 }
 
 .contact {
@@ -686,6 +910,14 @@ header a {
   transition: all 0.1s ease;
 }
 
+.sponsors .sponsors-gallery div:last-child {
+  grid-column: 1 / -1;
+}
+
+.sponsors .sponsors-gallery div:last-child img {
+  max-width: 50%;
+}
+
 @media screen and (min-width: 400px) {
   .first-soon {
     font-size: 3rem;
@@ -706,6 +938,10 @@ header a {
   .first .button {
     min-width: initial;
     width: 300px;
+  }
+
+  .rsvp.button {
+    width: 150px;
   }
 
   .first-img img {
@@ -739,6 +975,22 @@ header a {
 
   .contact .social-gallery {
     grid-template-columns: 25% 25% 25% 25%;
+  }
+
+  .sponsors .sponsors-gallery {
+    grid-template-columns: 33.33% 33.33% 33.33%;
+  }
+
+  .sponsors .sponsors-gallery div {
+    margin: 0 30px;
+  }
+
+  .sponsors .sponsors-gallery div:last-child {
+    grid-column: initial;
+  }
+
+  .sponsors .sponsors-gallery div:last-child img {
+    max-width: 100%;
   }
 }
 
@@ -776,8 +1028,14 @@ header a {
     margin: 5px 0;
     padding: 0 5px;
     border-radius: 25px;
-    font-size: 18px;
+    font-size: 23px;
     margin-top: 0;
+  }
+
+  .rsvp.button {
+    width: 150px;
+    font-size: 20px;
+    margin-top: 10px;
   }
 
   .first-img {
@@ -905,31 +1163,20 @@ header a {
 
   .home .sponsors {
     flex-direction: column;
-  }
-
-  .sponsors .sponsors-title {
-    font-size: 35px;
-  }
-
-  .sponsors .sponsors-gallery {
-    grid-template-columns: 33.33% 33.33% 33.33%;
-    padding: 0 30px;
-  }
-
-  .sponsors .sponsors-gallery div {
-    margin: 0 30px;
-  }
-
-  .sponsors .sponsors-gallery div:last-child {
-    grid-column: 1 / -1;
-  }
-
-  .sponsors .sponsors-gallery div:last-child img {
-    max-width: 25%;
+    padding: 30px 0;
   }
 
   .download.button:hover {
     background-color: #f58e2e;
+  }
+
+  .home .faq {
+    flex-direction: column;
+    margin: 50px auto;
+  }
+
+  .faq .faq-title {
+    font-size: 35px;
   }
 
   .home .contact {
@@ -973,19 +1220,12 @@ header a {
     grid-template-columns: 25% 25% 25% 25%;
   }
 
-  .sponsors .sponsors-gallery div:nth-last-child(2) {
-    grid-column-start: 2;
-    grid-column-end: 3;
-  }
-
   .sponsors .sponsors-gallery div:last-child {
-    grid-column-start: 3;
-    grid-column-end: 4;
+    grid-column: -1 / 1;
   }
 
-  .sponsors .sponsors-gallery div:last-child img,
-  .sponsors .sponsors-gallery div:nth-last-child(2) img {
-    max-width: 100%;
+  .sponsors .sponsors-gallery div:last-child img {
+    max-width: 50%;
   }
 }
 
@@ -996,6 +1236,7 @@ header a {
 
   .first-logo {
     max-width: none;
+    margin-bottom: 15px;
   }
 
   .first-logo svg {
@@ -1017,6 +1258,10 @@ header a {
     height: 50px;
     max-width: 350px;
     border-radius: 25px;
+    font-size: 25px;
+  }
+
+  .rsvp.button {
     font-size: 20px;
   }
 
@@ -1126,6 +1371,10 @@ header a {
     font-size: 20px;
     padding: 0 15px;
     background-color: #ff993b;
+  }
+
+  .faq .faq-title {
+    font-size: 40px;
   }
 
   .contact .contact-title {
