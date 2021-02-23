@@ -8,7 +8,7 @@ import yocket from './../assets/past-sponsors/yocket.png'
 import balsamiq from './../assets/past-sponsors/balsamiq.png'
 import packtpub from './../assets/past-sponsors/packtpub.png'
 import spike from './../assets/past-sponsors/spike.png'
-import kaspersky from './../assets/past-sponsors/kaspersky.png'
+// import kaspersky from './../assets/past-sponsors/kaspersky.png'
 import brochure from './../assets/Brochure.pdf'
 import { FaDownload } from 'react-icons/fa'
 
@@ -26,7 +26,8 @@ const Sponsors = React.forwardRef(({ setSponsors }, ref) => {
         <div><a href='https://yocket.in/' target='_blank' rel='noreferrer'><img src={yocket} alt='Yocket' /></a></div>
         <div><a href='https://www.packtpub.com/' target='_blank' rel='noreferrer'><img src={packtpub} alt='packtpub' /></a></div>
         <div><a href='https://spikeapp.in/' target='_blank' rel='noreferrer'><img src={spike} alt='Spike' /></a></div>
-        <div><a href='https://academy.kaspersky.com/' target='_blank' rel='noreferrer'><img src={kaspersky} alt='Kaspersky' /></a></div>
+        {/* <div><a href='https://academy.kaspersky.com/' target='_blank' rel='noreferrer'><img src={kaspersky} alt='Kaspersky' /></a></div> */}
+        <div><a href='https://academy.kaspersky.com/' target='_blank' rel='noreferrer'> </a></div>
       </div>
       <a href={brochure} download><button className='download button'><FaDownload style={{ color: '#fff', cursor: 'pointer' }} />     Download Brochure</button></a>
     </div>
