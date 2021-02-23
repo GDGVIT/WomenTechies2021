@@ -41,7 +41,7 @@ const Intro = React.forwardRef(({ setIntro }, ref) => {
           data-button-theme='light'
           style={{ height: '44px', width: '312px' }}
         />
-        <a href='https://dsc.community.dev/events/details/developer-student-clubs-vellore-institute-of-technology-presents-womentechies-2021/#/' target='_blank' rel='noreferrer'><button className='rsvp button'>RSVP</button></a>
+        <a href='https://dsc.community.dev/events/details/developer-student-clubs-vellore-institute-of-technology-presents-womentechies-2021/#/' target='_blank' rel='noreferrer'>RSVP for Updates</a>
         {/* <a href='https://www.instagram.com/reel/CLBd9tWBIGY/?igshid=1uga220uun2gt' target='_blank' rel='noreferrer' className='first-teaser'><BsFillPlayFill style={{ color: '#fc257e', cursor: 'pointer' }} />    Recap</a> */}
       </div>
       <div className='first-img'><img src={intro} alt='Women Techies 2021' /></div>
