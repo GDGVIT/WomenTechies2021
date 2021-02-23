@@ -162,7 +162,7 @@ header a {
   transition: all 0.5s ease-in-out;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1300px) {
   header {
     overflow-x: hidden;
   }
@@ -488,8 +488,11 @@ header a {
 .first a {
   display: flex;
   align-items: center;
-  text-decoration: none;
+  text-decoration: underline;
   margin: 5px 0;
+  font-size: 0.8rem;
+  margin-top: 10px;
+  color: var(--Pink);
 }
 
 .first-teaser {
@@ -713,12 +716,16 @@ header a {
 .sponsors-gallery img {
   margin: 20px auto;
   padding: 0 20px;
-  max-width: 100%;
+  width: 100%;
   display: grid;
 }
 
 .sponsors a {
   text-decoration: none;
+}
+
+.sponsors .sponsors-gallery a {
+  width: 100%;
 }
 
 .download.button {
@@ -915,7 +922,7 @@ header a {
 }
 
 .first a:hover {
-  color: var(--Pink);
+  color: var(--Purple);
   transition: all 0.1s ease;
 }
 
@@ -1036,6 +1043,11 @@ header a {
   .rsvp.button {
     width: 150px;
     font-size: 20px;
+    margin-top: 10px;
+  }
+
+  .first a {
+    font-size: 18px;
     margin-top: 10px;
   }
 
@@ -1270,6 +1282,10 @@ header a {
   }
 
   .rsvp.button {
+    font-size: 20px;
+  }
+
+  .first a {
     font-size: 20px;
   }
 
