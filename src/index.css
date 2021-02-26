@@ -90,6 +90,7 @@ header a {
 
 .nav-links li .nav-home:hover,
 .nav-links li .nav-hack:hover,
+.nav-links li .nav-timeline:hover,
 .nav-links li .nav-contact:hover {
   color: var(--Pink);
   border-bottom: var(--Pink) solid 5px;
@@ -113,6 +114,7 @@ header a {
 
 .nav-links li .nav-home-active,
 .nav-links li .nav-hack-active,
+.nav-links li .nav-timeline-active,
 .nav-links li .nav-contact-active {
   color: var(--Pink);
   border-bottom: var(--Pink) solid 5px;
@@ -210,6 +212,7 @@ header a {
 
   .nav-links li .nav-home-active:hover,
   .nav-links li .nav-hack-active:hover,
+  .nav-links li .nav-timeline-active:hover,
   .nav-links li .nav-contact-active:hover {
     color: var(--Pink);
   }
