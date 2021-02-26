@@ -62,8 +62,6 @@ const Nav = ({ active, introRef, aboutRef, hackRef, visionRef, sponsorsRef, cont
             <li><span className={`nav-sponsors ${(active === 'sponsors') ? 'nav-sponsors-active' : ''}`} onClick={sponsorsScroll}>Sponsors</span></li>
             <li><span className={`nav-faq ${(active === 'faq') ? 'nav-faq-active' : ''}`} onClick={faqScroll}>FAQ's</span></li>
             <li><span className={`nav-contact ${(active === 'contact') ? 'nav-contact-active' : ''}`} onClick={contactScroll}>Contact Us</span></li>
-            {/* <li><NavLink to="contact-us" exact activeClassName='nav-active' onClick={() => setShow(true)}>Contact Us</NavLink></li> */}
-            {/* <li><NavLink to="faq" exact activeClassName='active' onClick={() => setShow(true)}>FAQ's</NavLink></li> */}
             <Modal show={show} onClose={() => setShow(false)} />
           </ul>
         </nav>
@@ -74,7 +72,7 @@ const Nav = ({ active, introRef, aboutRef, hackRef, visionRef, sponsorsRef, cont
         </div>
       </header>
       <div className={`discord-widget ${discoom && 'open'}`}>
-        <a href='https://discord.gg/dEqfTTPPR4' target='_blank' rel='noreferrer'>
+        <a href='https://discord.gg/PvkaBF7yp4' target='_blank' rel='noreferrer'>
           <img src={discord} alt='Discord' className='discord-logo' />
           <div className='discord-bg'>Join the #wt21 Discord!</div>
         </a>
