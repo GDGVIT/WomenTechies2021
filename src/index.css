@@ -619,7 +619,7 @@ header a {
   min-width: 75%;
   padding: 0 5px;
   border-radius: 18px;
-  background-color: var(--Purple);
+  background-color: var(--Pink);
   border: solid 1px transparent;
   color: #fff;
   outline: none;
@@ -631,7 +631,7 @@ header a {
 }
 
 .button:hover {
-  background-color: #7611a5;
+  background-color: #ec2377;
   transform: scale(1.05);
   transition: all 0.1s ease-in-out;
 }
