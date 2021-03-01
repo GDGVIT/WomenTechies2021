@@ -1,8 +1,8 @@
 import React from 'react'
-import devfolio from './../assets/past-sponsors/devfolio.png'
-import matic from './../assets/past-sponsors/matic.png'
-import portis from './../assets/past-sponsors/portis.png'
-import tezos from './../assets/past-sponsors/tezos.png'
+// import devfolio from './../assets/past-sponsors/devfolio.png'
+// import matic from './../assets/past-sponsors/matic.png'
+// import portis from './../assets/past-sponsors/portis.png'
+// import tezos from './../assets/past-sponsors/tezos.png'
 import agora from './../assets/past-sponsors/agora.png'
 import yocket from './../assets/past-sponsors/yocket.png'
 import balsamiq from './../assets/past-sponsors/balsamiq.png'
@@ -22,10 +22,10 @@ const Sponsors = React.forwardRef(({ setSponsors }, ref) => {
     <div className='sponsors' id='sponsors' ref={ref}>
       <div className='sponsors-title'>Our Sponsors</div>
       <div className='sponsors-gallery'>
-        <div><a href='https://devfolio.co/' target='_blank' rel='noreferrer'><img src={devfolio} alt='Devfolio' /></a></div>
-        <div><a href='https://matic.network/' target='_blank' rel='noreferrer'><img src={matic} alt='Matic' /></a></div>
-        <div><a href='https://www.portis.io/' target='_blank' rel='noreferrer'><img src={portis} alt='portis' /></a></div>
-        <div><a href='https://tezos.com/' target='_blank' rel='noreferrer'><img src={tezos} alt='Tezos' /></a></div>
+        {/* <div><a href='https://devfolio.co/' target='_blank' rel='noreferrer'><img src={devfolio} alt='Devfolio' /></a></div> */}
+        {/* <div><a href='https://matic.network/' target='_blank' rel='noreferrer'><img src={matic} alt='Matic' /></a></div> */}
+        {/* <div><a href='https://www.portis.io/' target='_blank' rel='noreferrer'><img src={portis} alt='portis' /></a></div> */}
+        {/* <div><a href='https://tezos.com/' target='_blank' rel='noreferrer'><img src={tezos} alt='Tezos' /></a></div> */}
         <div><a href='https://www.agora.io/' target='_blank' rel='noreferrer'><img src={agora} alt='agora' /></a></div>
         <div><a href='https://balsamiq.com/' target='_blank' rel='noreferrer'><img src={balsamiq} alt='balsamiq' /></a></div>
         <div><a href='https://yocket.in/' target='_blank' rel='noreferrer'><img src={yocket} alt='Yocket' /></a></div>
