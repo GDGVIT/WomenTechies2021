@@ -107,10 +107,10 @@ const FAQ = React.forwardRef(({ setFAQ }, ref) => {
 
         <div className='ac pink'>
           <h2 className='ac-header'>
-            <button className='ac-trigger'>A fully developed application needs to have a solid backend for data storage like SQL, SharePoint etc. since it's online, is it accepted to show only the prototype of it?</button>
+            <button className='ac-trigger'>A fully developed application needs to have a proper database for persistent data storage. Since it's online, is it accepted to show only the prototype of it?</button>
           </h2>
           <div className='ac-panel'>
-            <p className=''><span className='text'>Yes, it's absolutely fine to submit just the prototype. If you use any database like MySQL or PostgresSQL you can also submit a database dump along with your submission. However, you are allowed to submit just the prototype.</span></p>
+            <p className=''><span className='text'>Yes, it's absolutely fine to submit just the prototype. You can develop the application on your local machine and submit just the source code along with the instructions to run.</span></p>
           </div>
         </div>
 
