@@ -34,13 +34,13 @@ const Intro = React.forwardRef(({ setIntro }, ref) => {
 
         </div>
         {/* <div className='first-soon'>Coming Soon</div> */}
-        {/* <a href='/' target='_blank' rel='noreferrer'><button className='register button'>Register</button></a> */}
-        <div
+        <a href='https://womentechies21.hackerearth.com/' className='register-button' target='_blank' rel='noreferrer'><button className='register button'>Register</button></a>
+        {/* <div
           className='apply-button'
           data-hackathon-slug='women-techies'
           data-button-theme='light'
           style={{ height: '44px', width: '312px' }}
-        />
+        /> */}
         <a href='https://dsc.community.dev/events/details/developer-student-clubs-vellore-institute-of-technology-presents-womentechies-2021/#/' target='_blank' rel='noreferrer'>RSVP for Updates</a>
         {/* <a href='https://www.instagram.com/reel/CLBd9tWBIGY/?igshid=1uga220uun2gt' target='_blank' rel='noreferrer' className='first-teaser'><BsFillPlayFill style={{ color: '#fc257e', cursor: 'pointer' }} />    Recap</a> */}
       </div>
