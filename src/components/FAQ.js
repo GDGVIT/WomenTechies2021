@@ -20,7 +20,7 @@ const FAQ = React.forwardRef(({ setFAQ }, ref) => {
             <button className='ac-trigger'>Do I need to pay any money to register for the Hackathon?</button>
           </h2>
           <div className='ac-panel'>
-            <p className=''><span className='text'>No. You do not have to pay anything to anyone to register yourself for any Hackathon on Devfolio</span></p>
+            <p className=''><span className='text'>No. You do not have to pay anything to anyone to register yourself for any Hackathon on Devfolio.</span></p>
           </div>
         </div>
 
