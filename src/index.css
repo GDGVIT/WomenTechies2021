@@ -608,13 +608,18 @@ header a {
   max-width: 375px;
 }
 
+.first .register-button {
+  text-decoration: none;
+  margin-top: 0;
+}
+
 .button {
   width: 200px;
   height: 36px;
   min-width: 75%;
   padding: 0 5px;
   border-radius: 18px;
-  background-color: var(--Pink);
+  background-color: var(--Purple);
   border: solid 1px transparent;
   color: #fff;
   outline: none;
@@ -626,7 +631,7 @@ header a {
 }
 
 .button:hover {
-  background-color: #ec2377;
+  background-color: #7611a5;
   transform: scale(1.05);
   transition: all 0.1s ease-in-out;
 }
