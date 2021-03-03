@@ -1015,6 +1015,25 @@ header a {
   max-width: 50%;
 }
 
+.katbin {
+  transform: translateX(-1000px);
+  opacity: 0;
+}
+
+.katbin.enter-done {
+  transform: translateX(0);
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+#katbin {
+  width: 50%;
+}
+
+#katbin img {
+  width: 100%;
+}
+
 @media screen and (min-width: 400px) {
   .first-soon {
     font-size: 3rem;

@@ -131,6 +131,15 @@ const FAQ = React.forwardRef(({ setFAQ }, ref) => {
             <p className=''><span className='text'>The developer/developers of the web/mobile application will have all rights and own the IP of the product. However, all code needs to be in the public domain (open source) so that it can be evaluated by the judges.</span></p>
           </div>
         </div>
+
+        <div className='ac pink'>
+          <h2 className='ac-header'>
+            <button className='ac-trigger'>If I already applied on Devfolio do I have to apply again?</button>
+          </h2>
+          <div className='ac-panel'>
+            <p className=''><span className='text'>Yes, because of unforeseen circumstances we had to shift to HackerEarth. You will be an eligible participant only if you register on HackerEarth.</span></p>
+          </div>
+        </div>
       </div>
     </div>
   )

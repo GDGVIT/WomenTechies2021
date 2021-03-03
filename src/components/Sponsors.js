@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { CSSTransition } from 'react-transition-group'
+import katbin from './../assets/past-sponsors/katbin.png'
 // import devfolio from './../assets/past-sponsors/devfolio.png'
 // import matic from './../assets/past-sponsors/matic.png'
 // import portis from './../assets/past-sponsors/portis.png'
@@ -18,9 +20,13 @@ import brochure from './../assets/Brochure.pdf'
 import { FaDownload } from 'react-icons/fa'
 
 const Sponsors = React.forwardRef(({ setSponsors }, ref) => {
+  const [ket, setKet] = useState(false)
   return (
     <div className='sponsors' id='sponsors' ref={ref}>
-      <div className='sponsors-title'>Our Sponsors</div>
+      <div className='sponsors-title' onClick={() => { if (!ket) setKet(true) }}>Our Sponsors</div>
+      <CSSTransition in={ket} unmountOnExit timeout={{ enter: 0, exit: 300 }}>
+        <div className='katbin'><a id='katbin' href='https://katb.in/' target='_blank' rel='noreferrer'><img src={katbin} alt='Katbin' /></a></div>
+      </CSSTransition>
       <div className='sponsors-gallery'>
         {/* <div><a href='https://devfolio.co/' target='_blank' rel='noreferrer'><img src={devfolio} alt='Devfolio' /></a></div> */}
         {/* <div><a href='https://matic.network/' target='_blank' rel='noreferrer'><img src={matic} alt='Matic' /></a></div> */}
