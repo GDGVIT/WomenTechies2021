@@ -140,6 +140,15 @@ const FAQ = React.forwardRef(({ setFAQ }, ref) => {
             <p className=''><span className='text'>Yes, because of unforeseen circumstances we had to shift to HackerEarth. You will be an eligible participant only if you register on HackerEarth.</span></p>
           </div>
         </div>
+
+        <div className='ac purple'>
+          <h2 className='ac-header'>
+            <button className='ac-trigger'>Do we have to miss classes on 15th March, Monday?</button>
+          </h2>
+          <div className='ac-panel'>
+            <p className=''><span className='text'>No, On Duty attendance will be provided to all VIT participants on the 15th.</span></p>
+          </div>
+        </div>
       </div>
     </div>
   )
