@@ -3,7 +3,7 @@ import dscLogo from './../assets/dsc-logo.png'
 import discord from './../assets/discord.png'
 import Modal from './Modal'
 
-const Nav = ({ active, introRef, aboutRef, hackRef, visionRef, sponsorsRef, contactRef, faqRef, timelineRef }) => {
+const Nav = ({ active, introRef, aboutRef, hackRef, visionRef, sponsorsRef, contactRef, faqRef, timelineRef, teaserRef }) => {
   const [menuOpen, setMenuOpen] = useState(false)
   const [show, setShow] = useState(false)
   const [discoom, setDiscoom] = useState(true)
@@ -25,6 +25,10 @@ const Nav = ({ active, introRef, aboutRef, hackRef, visionRef, sponsorsRef, cont
   const visionScroll = () => {
     if (menuOpen) onClick()
     visionRef.scrollIntoView({ behavior: 'smooth' })
+  }
+  const teaserScroll = () => {
+    if (menuOpen) onClick()
+    teaserRef.scrollIntoView({ behavior: 'smooth' })
   }
   const timelineScroll = () => {
     if (menuOpen) onClick()
@@ -60,6 +64,7 @@ const Nav = ({ active, introRef, aboutRef, hackRef, visionRef, sponsorsRef, cont
             <li><span className={`nav-about ${(active === 'about') ? 'nav-about-active' : ''}`} onClick={aboutScroll}>About DSC</span></li>
             <li><span className={`nav-hack ${(active === 'hack') ? 'nav-hack-active' : ''}`} onClick={hackScroll}>Hackathon</span></li>
             <li><span className={`nav-vision ${(active === 'vision') ? 'nav-vision-active' : ''}`} onClick={visionScroll}>Vision</span></li>
+            <li><span className={`nav-teaser ${(active === 'teaser') ? 'nav-teaser-active' : ''}`} onClick={teaserScroll}>Teaser</span></li>
             {/* <li><NavLink to="teaser" exact activeClassName='nav-active' onClick={() => setShow(true)}>Teaser</NavLink></li> */}
             {/* <li><NavLink to="speakers" exact activeClassName='nav-active' onClick={() => setShow(true)}>Speakers</NavLink></li> */}
             <li><span className={`nav-timeline ${(active === 'timeline') ? 'nav-timeline-active' : ''}`} onClick={timelineScroll}>Timeline</span></li>
