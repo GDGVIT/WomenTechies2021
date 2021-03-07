@@ -1,14 +1,14 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 // import { BsFillPlayFill } from 'react-icons/bs'
 import intro from './../assets/intro-img.svg'
 
 const Intro = React.forwardRef(({ setIntro }, ref) => {
-  useEffect(() => {
-    const scDev = document.createElement('script')
-    scDev.src = 'https://apply.devfolio.co/v2/sdk.js'
-    scDev.async = true
-    document.body.appendChild(scDev)
-  }, [])
+  // useEffect(() => {
+  //   const scDev = document.createElement('script')
+  //   scDev.src = 'https://apply.devfolio.co/v2/sdk.js'
+  //   scDev.async = true
+  //   document.body.appendChild(scDev)
+  // }, [])
 
   return (
     <div className='intro' ref={ref}>
