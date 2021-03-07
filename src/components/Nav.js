@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { CSSTransition } from 'react-transition-group'
 import dscLogo from './../assets/dsc-logo.png'
 import discord from './../assets/discord.png'
 import Modal from './Modal'
@@ -7,6 +8,7 @@ const Nav = ({ active, introRef, aboutRef, hackRef, visionRef, sponsorsRef, cont
   const [menuOpen, setMenuOpen] = useState(false)
   const [show, setShow] = useState(false)
   const [discoom, setDiscoom] = useState(true)
+  const [width, setWidth] = useState(0)
 
   const onClick = () => setMenuOpen(!menuOpen)
 
@@ -53,6 +55,22 @@ const Nav = ({ active, introRef, aboutRef, hackRef, visionRef, sponsorsRef, cont
     }, 3000)
     return () => clearTimeout(timer)
   }, [discoom])
+  useEffect(() => {
+    const onResize = () => {
+      setWidth(window.innerWidth)
+    }
+    window.addEventListener('resize', onResize)
+    onResize()
+  }, [width])
+
+  const navbarItems = (
+    <>
+      <li><span className={`nav-timeline ${(active === 'timeline') ? 'nav-timeline-active' : ''}`} onClick={timelineScroll}>Timeline</span></li>
+      <li><span className={`nav-sponsors ${(active === 'sponsors') ? 'nav-sponsors-active' : ''}`} onClick={sponsorsScroll}>Sponsors</span></li>
+      <li><span className={`nav-faq ${(active === 'faq') ? 'nav-faq-active' : ''}`} onClick={faqScroll}>FAQ's</span></li>
+      <li><span className={`nav-contact ${(active === 'contact') ? 'nav-contact-active' : ''}`} onClick={contactScroll}>Contact Us</span></li>
+    </>
+  )
 
   return (
     <>
@@ -67,10 +85,19 @@ const Nav = ({ active, introRef, aboutRef, hackRef, visionRef, sponsorsRef, cont
             <li><span className={`nav-teaser ${(active === 'teaser') ? 'nav-teaser-active' : ''}`} onClick={teaserScroll}>Teaser</span></li>
             {/* <li><NavLink to="teaser" exact activeClassName='nav-active' onClick={() => setShow(true)}>Teaser</NavLink></li> */}
             {/* <li><NavLink to="speakers" exact activeClassName='nav-active' onClick={() => setShow(true)}>Speakers</NavLink></li> */}
-            <li><span className={`nav-timeline ${(active === 'timeline') ? 'nav-timeline-active' : ''}`} onClick={timelineScroll}>Timeline</span></li>
-            <li><span className={`nav-sponsors ${(active === 'sponsors') ? 'nav-sponsors-active' : ''}`} onClick={sponsorsScroll}>Sponsors</span></li>
-            <li><span className={`nav-faq ${(active === 'faq') ? 'nav-faq-active' : ''}`} onClick={faqScroll}>FAQ's</span></li>
-            <li><span className={`nav-contact ${(active === 'contact') ? 'nav-contact-active' : ''}`} onClick={contactScroll}>Contact Us</span></li>
+            <CSSTransition in={width > 1200} unmountOnExit timeout={{ enter: 0, exit: 0 }}>
+              <li>
+                <ul className='nav-links-desktop'>
+                  {navbarItems}
+                </ul>
+                <span className='nav-more'>More</span>
+              </li>
+            </CSSTransition>
+            <CSSTransition in={width < 1200} unmountOnExit timeout={{ enter: 0, exit: 0 }}>
+              <>
+                {navbarItems}
+              </>
+            </CSSTransition>
             <Modal show={show} onClose={() => setShow(false)} />
           </ul>
         </nav>

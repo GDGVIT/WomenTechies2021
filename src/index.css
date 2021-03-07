@@ -83,10 +83,6 @@ header a {
   cursor: pointer;
 }
 
-.nav-links li span:hover {
-  color: var(--Pink);
-}
-
 .nav-links li .nav-home:hover,
 .nav-links li .nav-hack:hover,
 .nav-links li .nav-timeline:hover,
@@ -137,6 +133,68 @@ header a {
   border-bottom: #ff993b solid 5px;
 }
 
+.nav-links-desktop {
+  position: fixed;
+  width: 20%;
+  max-width: 250px;
+  right: 0;
+  top: 90px;
+  background-color: #fbfbfb;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  border-bottom-left-radius: 30px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1), 0 -11px 0 #fbfbfb;
+  padding-bottom: 10px;
+  list-style: none;
+}
+
+.nav-links .enter-done:hover .nav-links-desktop {
+  display: flex;
+}
+
+.nav-links-desktop:hover + .nav-more {
+  color: var(--Pink);
+}
+
+.nav-links-desktop li {
+  margin: 10px 9px;
+}
+
+.nav-links-desktop li span,
+.nav-links-desktop li span:hover {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  border-bottom: none !important;
+  color: initial;
+}
+
+.nav-links-desktop li .nav-home-active:hover,
+.nav-links-desktop li .nav-hack-active:hover,
+.nav-links-desktop li .nav-timeline-active:hover,
+.nav-links-desktop li .nav-contact-active:hover {
+  color: var(--Pink);
+}
+
+.nav-links-desktop li .nav-about-active:hover,
+.nav-links-desktop li .nav-teaser-active:hover,
+.nav-links-desktop li .nav-faq-active:hover {
+  color: var(--Purple);
+}
+
+.nav-links-desktop li .nav-vision-active:hover {
+  color: #ffa757;
+}
+
+.nav-links-desktop li .nav-sponsors-active:hover {
+  color: #ff993b;
+}
+
+.nav-links li span:hover {
+  color: var(--Pink);
+}
+
 .hamburger {
   display: none;
 }
@@ -165,7 +223,7 @@ header a {
   transition: all 0.5s ease-in-out;
 }
 
-@media screen and (max-width: 1430px) {
+@media screen and (max-width: 1200px) {
   header {
     overflow-x: hidden;
   }
@@ -178,7 +236,7 @@ header a {
 
   .nav-links {
     position: fixed;
-    width: 50%;
+    width: 30%;
     right: 0;
     top: 65px;
     background-color: #fbfbfb;
@@ -190,6 +248,12 @@ header a {
     border-bottom-left-radius: 30px;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1), 0 -11px 0 #fbfbfb;
     padding-bottom: 10px;
+  }
+
+  @media screen and (max-width: 550px) {
+    .nav-links {
+      width: 50%;
+    }
   }
 
   .nav-links li span {
@@ -1337,6 +1401,7 @@ header a {
 
   .yt-container {
     width: 100vh;
+    max-width: 90vw;
     height: 75vh;
   }
 
