@@ -790,7 +790,7 @@ header a {
 
 .timeline {
   width: 100vw;
-  margin: 10vw 0;
+  margin: 5vw 0;
   padding: 0 20px;
   background-color: #fff3f8;
 }
@@ -809,7 +809,7 @@ header a {
 
 .timeline ul {
   list-style: none;
-  padding: 20px 10%;
+  padding: 20px 5%;
   align-items: stretch;
 }
 
@@ -826,7 +826,7 @@ header a {
   cursor: pointer;
   opacity: 0.5;
   padding: 2px;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 700;
   color: var(--Pink);
 }
@@ -1176,7 +1176,12 @@ header a {
 
 @media screen and (min-width: 768px) {
   .timeline ul {
+    padding: 20px 10%;
     align-self: flex-start;
+  }
+
+  .timeline ul li label {
+    font-size: 20px;
   }
 
   .contact ul {
