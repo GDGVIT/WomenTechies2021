@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { CSSTransition } from 'react-transition-group'
+import amagi from './../assets/past-sponsors/amagi.png'
 import katbin from './../assets/past-sponsors/katbin.png'
 // import devfolio from './../assets/past-sponsors/devfolio.png'
 // import matic from './../assets/past-sponsors/matic.png'
@@ -25,8 +26,15 @@ const Sponsors = React.forwardRef(({ setSponsors }, ref) => {
     <div className='sponsors' id='sponsors' ref={ref}>
       <div className='sponsors-title' onClick={() => { if (!ket) setKet(true) }}>Our Sponsors</div>
       <CSSTransition in={ket} unmountOnExit timeout={{ enter: 0, exit: 300 }}>
-        <div className='katbin'><a id='katbin' href='https://katb.in/' target='_blank' rel='noreferrer'><img src={katbin} alt='Katbin' /></a></div>
+        <div className='katbin'>
+          <a id='katbin' href='https://katb.in/' target='_blank' rel='noreferrer'><img src={katbin} alt='Katbin' /></a>
+          <span>KetBin</span>
+        </div>
       </CSSTransition>
+      <div className='amagi'>
+        <a id='amagi' href='https://www.amagi.com/' target='_blank' rel='noreferrer'><img src={amagi} alt='Amagi' /></a>
+        <span>Title Sponsor</span>
+      </div>
       <div className='sponsors-gallery'>
         {/* <div><a href='https://devfolio.co/' target='_blank' rel='noreferrer'><img src={devfolio} alt='Devfolio' /></a></div> */}
         {/* <div><a href='https://matic.network/' target='_blank' rel='noreferrer'><img src={matic} alt='Matic' /></a></div> */}

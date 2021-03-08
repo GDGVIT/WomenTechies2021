@@ -1112,6 +1112,7 @@ header a {
 .katbin {
   transform: translateX(-1000px);
   opacity: 0;
+  margin-bottom: 40px;
 }
 
 .katbin.enter-done {
@@ -1120,12 +1121,36 @@ header a {
   transition: all 0.3s ease-in-out;
 }
 
+.amagi {
+  margin-bottom: 10px;
+}
+
+#katbin + span {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+#amagi + span {
+  font-size: 20px;
+  font-weight: 600;
+}
+
 #katbin {
+  width: 50%;
+}
+
+#amagi {
   width: 50%;
 }
 
 #katbin img {
   width: 100%;
+  padding: 0 20px;
+}
+
+#amagi img {
+  width: 100%;
+  padding: 0 20px;
 }
 
 @media screen and (min-width: 400px) {
@@ -1225,6 +1250,10 @@ header a {
   .sponsors .sponsors-gallery div:nth-last-child(1) img,
   .sponsors .sponsors-gallery div:nth-last-child(2) img {
     max-width: 42%;
+  }
+
+  #amagi {
+    width: 30%;
   }
 }
 
@@ -1475,6 +1504,16 @@ header a {
   .about ul li p {
     font-size: 14px;
   }
+
+  #katbin + span {
+    font-size: 25px;
+    font-weight: 600;
+  }
+
+  #amagi + span {
+    font-size: 25px;
+    font-weight: 600;
+  }
 }
 
 @media screen and (min-width: 1000px) {
@@ -1516,6 +1555,10 @@ header a {
   .sponsors .sponsors-gallery div:nth-last-child(2) img,
   .sponsors .sponsors-gallery div:nth-last-child(3) img {
     max-width: 42%;
+  }
+
+  #amagi {
+    width: 25%;
   }
 }
 
@@ -1702,6 +1745,16 @@ header a {
 
   .about ul li p {
     font-size: 20px;
+  }
+
+  #katbin + span {
+    font-size: 30px;
+    font-weight: 600;
+  }
+
+  #amagi + span {
+    font-size: 30px;
+    font-weight: 600;
   }
 }
 
