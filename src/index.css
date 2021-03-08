@@ -879,6 +879,128 @@ header a {
   text-shadow: 0 3px 6px #9c7c7c29;
 }
 
+.home .speakers-container {
+  /* width: 80vw; */
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap !important;
+  align-items: space-around;
+  justify-content: center;
+  margin: 20px auto;
+  padding: 0 10px;
+}
+
+.card {
+  width: 75vw;
+  max-width: 350px;
+  height: 100vw;
+  max-height: 450px;
+  transform-style: preserve-3d;
+  perspective: 600px;
+  transition: all 1s cubic-bezier(0.5, 1.1, 0.5, 1.1);
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-front,
+.card-back {
+  width: 100%;
+  height: 100%;
+  padding: 7.5% 10px;
+  border-radius: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  text-align: center;
+}
+
+.card-front {
+  padding: 10%;
+  padding-bottom: 15%;
+  transition: all 1s cubic-bezier(0.5, 1.2, 0.5, 1.2);
+  transform: rotateY(0deg);
+}
+
+.card-back {
+  transition: all 1s cubic-bezier(0.5, 1.1, 0.5, 1.1);
+  transform: rotateY(180deg);
+}
+
+.card-front.pink,
+.card-back.pink {
+  background-color: #ffd9e9;
+  color: var(--Pink);
+}
+
+.card-front.purple,
+.card-back.purple {
+  background-color: #f7e6ff;
+  color: var(--Purple);
+}
+
+.card-front.yellow,
+.card-back.yellow {
+  background-color: #ffeddb;
+  color: #f78d1d;
+}
+
+.card-img {
+  width: 60%;
+  height: auto;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.card-front.pink .card-img {
+  border: 4px solid var(--Pink);
+}
+
+.card-front.purple .card-img {
+  border: 4px solid var(--Purple);
+}
+
+.card-front.yellow .card-img {
+  border: 4px solid #f78d1d;
+}
+
+.card-img img {
+  width: 100%;
+}
+
+.card-data {
+  height: 30%;
+}
+
+.card-name {
+  font-size: 20px;
+}
+
+.card-title {
+  color: #4e4e4e;
+}
+
+.card-description {
+  width: 75%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 500;
+  color: #000;
+}
+
+.card:hover .card-front {
+  transform: rotateY(-180deg);
+}
+
+.card:hover .card-back {
+  transform: rotateY(0deg);
+}
+
 .sponsors {
   width: 80vw;
   margin: 30px auto;
@@ -1189,6 +1311,10 @@ header a {
     height: 130%;
     top: -5%;
   }
+
+  .card-description {
+    font-size: 14px;
+  }
 }
 
 @media screen and (min-width: 550px) {
@@ -1218,6 +1344,10 @@ header a {
 
   .vision-bg {
     height: 105%;
+  }
+
+  .card-description {
+    font-size: 15px;
   }
 }
 
