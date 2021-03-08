@@ -28,7 +28,7 @@ const Sponsors = React.forwardRef(({ setSponsors }, ref) => {
       <CSSTransition in={ket} unmountOnExit timeout={{ enter: 0, exit: 300 }}>
         <div className='katbin'>
           <a id='katbin' href='https://katb.in/' target='_blank' rel='noreferrer'><img src={katbin} alt='Katbin' /></a>
-          <span>KetBin</span>
+          <span>KatBin</span>
         </div>
       </CSSTransition>
       <div className='amagi'>

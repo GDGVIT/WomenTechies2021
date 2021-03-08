@@ -976,6 +976,7 @@ header a {
 
 .card-name {
   font-size: 20px;
+  margin-bottom: 5px;
 }
 
 .card-title {
@@ -1037,10 +1038,6 @@ header a {
 
 .sponsors a {
   text-decoration: none;
-}
-
-.sponsors .sponsors-gallery a {
-  width: 100%;
 }
 
 .download.button {
@@ -1165,6 +1162,19 @@ header a {
   padding: 10px;
 }
 
+.app-links {
+  margin-top: 30px;
+  width: 50%;
+  flex-flow: row wrap !important;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.app-links a {
+  height: 75px;
+  margin-top: 20px;
+}
+
 .contact {
   margin-top: 40px;
   background-color: #ffeef5;
@@ -1232,10 +1242,6 @@ header a {
   max-width: 100%;
 }
 
-.modal-header img:hover {
-  cursor: pointer;
-}
-
 .first a:hover {
   color: var(--Purple);
   transition: all 0.1s ease;
@@ -1243,6 +1249,18 @@ header a {
 
 #starch {
   transform: scale(0.75);
+}
+
+.app-links a img {
+  height: 100%;
+}
+
+.modal-header img:hover {
+  cursor: pointer;
+}
+
+.sponsors .sponsors-gallery a {
+  width: 100%;
 }
 
 .sponsors .sponsors-gallery div:last-child {
@@ -1348,6 +1366,10 @@ header a {
 
   .card-description {
     font-size: 15px;
+  }
+
+  .card-name {
+    margin-bottom: 0;
   }
 }
 
