@@ -1,4 +1,6 @@
 import React, { useEffect, useRef } from 'react'
+import android from './../assets/android.png'
+import ios from './../assets/ios.png'
 import Accordion from '../accordion.js'
 
 const FAQ = React.forwardRef(({ setFAQ }, ref) => {
@@ -149,6 +151,10 @@ const FAQ = React.forwardRef(({ setFAQ }, ref) => {
             <p className=''><span className='text'>No, On Duty attendance will be provided to all VIT participants on the 15th.</span></p>
           </div>
         </div>
+      </div>
+      <div className='app-links'>
+        <a href='https://play.google.com/store/apps/details?id=com.dscvit.wt21' target='_blank' rel='noreferrer'><img src={android} alt='play store' /></a>
+        <a href='https://apps.apple.com/in/app/womentechies-2021/id1556003243' target='_blank' rel='noreferrer'><img src={ios} id='ios' alt='app store' /></a>
       </div>
     </div>
   )

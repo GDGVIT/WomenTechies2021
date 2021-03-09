@@ -4,7 +4,7 @@ import dscLogo from './../assets/dsc-logo.png'
 import discord from './../assets/discord.png'
 import Modal from './Modal'
 
-const Nav = ({ active, introRef, aboutRef, hackRef, visionRef, sponsorsRef, contactRef, faqRef, timelineRef, teaserRef }) => {
+const Nav = ({ active, introRef, aboutRef, hackRef, visionRef, sponsorsRef, contactRef, faqRef, timelineRef, teaserRef, speakersRef }) => {
   const [menuOpen, setMenuOpen] = useState(false)
   const [show, setShow] = useState(false)
   const [discoom, setDiscoom] = useState(true)
@@ -36,6 +36,10 @@ const Nav = ({ active, introRef, aboutRef, hackRef, visionRef, sponsorsRef, cont
     if (menuOpen) onClick()
     timelineRef.scrollIntoView({ behavior: 'smooth' })
   }
+  const speakersScroll = () => {
+    if (menuOpen) onClick()
+    speakersRef.scrollIntoView({ behavior: 'smooth' })
+  }
   const sponsorsScroll = () => {
     if (menuOpen) onClick()
     sponsorsRef.scrollIntoView({ behavior: 'smooth' })
@@ -66,6 +70,7 @@ const Nav = ({ active, introRef, aboutRef, hackRef, visionRef, sponsorsRef, cont
   const navbarItems = (
     <>
       <li><span className={`nav-timeline ${(active === 'timeline') ? 'nav-timeline-active' : ''}`} onClick={timelineScroll}>Timeline</span></li>
+      <li><span className={`nav-speakers ${(active === 'speakers') ? 'nav-speakers-active' : ''}`} onClick={speakersScroll}>Speakers</span></li>
       <li><span className={`nav-sponsors ${(active === 'sponsors') ? 'nav-sponsors-active' : ''}`} onClick={sponsorsScroll}>Sponsors</span></li>
       <li><span className={`nav-faq ${(active === 'faq') ? 'nav-faq-active' : ''}`} onClick={faqScroll}>FAQ's</span></li>
       <li><span className={`nav-contact ${(active === 'contact') ? 'nav-contact-active' : ''}`} onClick={contactScroll}>Contact Us</span></li>

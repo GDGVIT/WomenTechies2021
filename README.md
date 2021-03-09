@@ -13,9 +13,13 @@
 
 
 ## Features
-- [X] Static Website
-- [X] Recap for WT2020
-- [X] Sign up for updates 
+- [X] Static Website for WT2021
+- [X] Registration and RSVP Links 
+- [X] Teaser Video
+- [X] Timeline
+- [X] Speakers
+- [X] Sponsors
+- [X] FAQ's
 
 <br>
 
