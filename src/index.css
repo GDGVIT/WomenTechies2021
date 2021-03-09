@@ -892,8 +892,10 @@ header a {
 
 .card {
   width: 75vw;
+  min-width: 240px;
   max-width: 350px;
   height: 100vw;
+  min-height: 375px;
   max-height: 450px;
   transform-style: preserve-3d;
   perspective: 600px;
@@ -989,7 +991,7 @@ header a {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 500;
   color: #000;
 }
