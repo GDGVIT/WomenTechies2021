@@ -17,6 +17,7 @@ import axure from './../assets/past-sponsors/axure.png'
 import sketch from './../assets/past-sponsors/sketch.png'
 import nostarchpress from './../assets/past-sponsors/nostarchpress.png'
 import wolfram from './../assets/past-sponsors/wolfram.png'
+import marlabs from './../assets/past-sponsors/marlabs.png'
 import brochure from './../assets/Brochure.pdf'
 import { FaDownload } from 'react-icons/fa'
 
@@ -51,6 +52,7 @@ const Sponsors = React.forwardRef(({ setSponsors }, ref) => {
         <div><a href='https://www.sketch.com/' target='_blank' rel='noreferrer'><img src={sketch} alt='Sketch' /></a></div>
         <div><a href='https://nostarch.com/' target='_blank' rel='noreferrer'><img id='starch' src={nostarchpress} alt='No Starch Press' /></a></div>
         <div><a href='https://www.wolfram.com/language/' target='_blank' rel='noreferrer'><img src={wolfram} alt='Wolfram Language' /></a></div>
+        <div><a href='https://www.marlabs.com/' target='_blank' rel='noreferrer'><img src={marlabs} alt='Marlabs' /></a></div>
       </div>
       <a href={brochure} download><button className='download button'><FaDownload style={{ color: '#fff', cursor: 'pointer' }} />     Download Brochure</button></a>
     </div>
