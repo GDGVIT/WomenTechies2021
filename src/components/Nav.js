@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react'
 import { CSSTransition } from 'react-transition-group'
-import dscLogo from './../assets/dsc-logo.png'
+import dscLogo from './../assets/DSClogo.svg'
+// import dscLogo from './../assets/dsc-logo.png'
 import discord from './../assets/discord.png'
 import Modal from './Modal'
 
-const Nav = ({ active, introRef, aboutRef, hackRef, visionRef, sponsorsRef, contactRef, faqRef, timelineRef, teaserRef, speakersRef }) => {
+// const Nav = ({ active, introRef, aboutRef, hackRef, visionRef, sponsorsRef, contactRef, faqRef, timelineRef, teaserRef, speakersRef }) => {
+const Nav = ({ active, introRef, aboutRef, hackRef, visionRef, sponsorsRef, contactRef, faqRef, timelineRef, teaserRef }) => {
   const [menuOpen, setMenuOpen] = useState(false)
   const [show, setShow] = useState(false)
   const [discoom, setDiscoom] = useState(true)
@@ -36,10 +38,10 @@ const Nav = ({ active, introRef, aboutRef, hackRef, visionRef, sponsorsRef, cont
     if (menuOpen) onClick()
     timelineRef.scrollIntoView({ behavior: 'smooth' })
   }
-  const speakersScroll = () => {
-    if (menuOpen) onClick()
-    speakersRef.scrollIntoView({ behavior: 'smooth' })
-  }
+  // const speakersScroll = () => {
+  //   if (menuOpen) onClick()
+  //   speakersRef.scrollIntoView({ behavior: 'smooth' })
+  // }
   const sponsorsScroll = () => {
     if (menuOpen) onClick()
     sponsorsRef.scrollIntoView({ behavior: 'smooth' })
@@ -70,7 +72,7 @@ const Nav = ({ active, introRef, aboutRef, hackRef, visionRef, sponsorsRef, cont
   const navbarItems = (
     <>
       <li><span className={`nav-timeline ${(active === 'timeline') ? 'nav-timeline-active' : ''}`} onClick={timelineScroll}>Timeline</span></li>
-      <li><span className={`nav-speakers ${(active === 'speakers') ? 'nav-speakers-active' : ''}`} onClick={speakersScroll}>Speakers</span></li>
+      {/* <li><span className={`nav-speakers ${(active === 'speakers') ? 'nav-speakers-active' : ''}`} onClick={speakersScroll}>Speakers</span></li> */}
       <li><span className={`nav-sponsors ${(active === 'sponsors') ? 'nav-sponsors-active' : ''}`} onClick={sponsorsScroll}>Sponsors</span></li>
       <li><span className={`nav-faq ${(active === 'faq') ? 'nav-faq-active' : ''}`} onClick={faqScroll}>FAQ's</span></li>
       <li><span className={`nav-contact ${(active === 'contact') ? 'nav-contact-active' : ''}`} onClick={contactScroll}>Contact Us</span></li>
@@ -80,11 +82,11 @@ const Nav = ({ active, introRef, aboutRef, hackRef, visionRef, sponsorsRef, cont
   return (
     <>
       <header>
-        <a href='https://dscvit.com/' target='_blank' rel='noreferrer'><img className='dsc-logo' src={dscLogo} alt='DSC Logo' /></a>
+        <a href='https://dscvit.com/' target='_blank' rel='noreferrer'><img className='dsc-logo' src={dscLogo} alt='GDSC Logo' /></a>
         <nav>
           <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
             <li><span className={`nav-home ${(active === 'intro') ? 'nav-home-active' : ''}`} onClick={introScroll}>Home</span></li>
-            <li><span className={`nav-about ${(active === 'about') ? 'nav-about-active' : ''}`} onClick={aboutScroll}>About DSC</span></li>
+            <li><span className={`nav-about ${(active === 'about') ? 'nav-about-active' : ''}`} onClick={aboutScroll}>About GDSC</span></li>
             <li><span className={`nav-hack ${(active === 'hack') ? 'nav-hack-active' : ''}`} onClick={hackScroll}>Hackathon</span></li>
             <li><span className={`nav-vision ${(active === 'vision') ? 'nav-vision-active' : ''}`} onClick={visionScroll}>Vision</span></li>
             <li><span className={`nav-teaser ${(active === 'teaser') ? 'nav-teaser-active' : ''}`} onClick={teaserScroll}>Teaser</span></li>

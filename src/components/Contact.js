@@ -14,14 +14,14 @@ const Contact = React.forwardRef(({ setContact }, ref) => {
       <div className='contact-title'>Contact Us</div>
       <ul>
         <li>
-          <div className='contact-name'>Riddhi Gupta</div>
-          <a className='contact-email' href='mailto:mailriddhigupta@gmail.com'>mailriddhigupta@gmail.com</a>
-          <span className='contact-no'>+91 9408955501</span>
+          <div className='contact-name'>Chanakya Kapoor</div>
+          <a className='contact-email' href='mailto:chanakyavkapoor@gmail.com'>chanakyavkapoor@gmail.com</a>
+          <span className='contact-no'>+91 81304 88585</span>
         </li>
         <li>
-          <div className='contact-name'>Shubham Srivastava</div>
-          <a className='contact-email' href='mailto:shubhamsriv99@outlook.com'>shubhamsriv99@outlook.com</a>
-          <span className='contact-no'>+91 9818891967</span>
+          <div className='contact-name'>Shresth Tiwary</div>
+          <a className='contact-email' href='mailto:shresthtiwary11@gmail.com'>shresthtiwary11@gmail.com</a>
+          <span className='contact-no'>+91 97429 40667</span>
         </li>
       </ul>
       <div className='social-title'>Social Media</div>

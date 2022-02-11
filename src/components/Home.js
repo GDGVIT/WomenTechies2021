@@ -5,13 +5,14 @@ import Hackathon from './Hackathon'
 import Vision from './Vision'
 import Teaser from './Teaser'
 import Timeline from './Timeline'
-import Speakers from './Speakers'
+// import Speakers from './Speakers'
 import Sponsors from './Sponsors'
 import Faq from './FAQ'
 import Contact from './Contact'
 import Modal from './Modal'
 
-const Home = ({ setActive, introRef, aboutRef, hackRef, visionRef, sponsorsRef, contactRef, faqRef, timelineRef, teaserRef, speakersRef }) => {
+// const Home = ({ setActive, introRef, aboutRef, hackRef, visionRef, sponsorsRef, contactRef, faqRef, timelineRef, teaserRef, speakersRef }) => {
+const Home = ({ setActive, introRef, aboutRef, hackRef, visionRef, sponsorsRef, contactRef, faqRef, timelineRef, teaserRef }) => {
   const [show, setShow] = useState(false)
   const [offset, setOffset] = useState(0)
   const [intro, setIntro] = useState(0)
@@ -20,7 +21,7 @@ const Home = ({ setActive, introRef, aboutRef, hackRef, visionRef, sponsorsRef, 
   const [vision, setVision] = useState(0)
   const [teaser, setTeaser] = useState(0)
   const [timeline, setTimeline] = useState(0)
-  const [speakers, setSpeakers] = useState(0)
+  // const [speakers, setSpeakers] = useState(0)
   const [sponsors, setSponsors] = useState(0)
   const [contact, setContact] = useState(0)
   const [faq, setFAQ] = useState(0)
@@ -32,7 +33,7 @@ const Home = ({ setActive, introRef, aboutRef, hackRef, visionRef, sponsorsRef, 
     } else if (document.selection && document.selection.type !== 'Control') {
       text = document.selection.createRange().text
     } else return
-    if (text.toLowerCase() === 'dsc' || text.toLowerCase() === 'dsc ') {
+    if (text.toLowerCase() === 'gdsc' || text.toLowerCase() === 'gdsc ') {
       setShow(true)
     }
   }
@@ -47,8 +48,8 @@ const Home = ({ setActive, introRef, aboutRef, hackRef, visionRef, sponsorsRef, 
       else if (offset <= (hack + vision) / 2) setActive('hack')
       else if (offset <= (vision + teaser) / 2) setActive('vision')
       else if (offset <= (teaser + timeline) / 2) setActive('teaser')
-      else if (offset <= (timeline + speakers) / 2) setActive('timeline')
-      else if (offset <= (speakers + sponsors) / 2) setActive('speakers')
+      else if (offset <= (timeline + sponsors) / 2) setActive('timeline')
+      // else if (offset <= (speakers + sponsors) / 2) setActive('speakers')
       else if (offset <= (sponsors + faq) / 2) setActive('sponsors')
       else if (offset <= (faq + contact) / 2) setActive('faq')
       else setActive('contact')
@@ -59,7 +60,7 @@ const Home = ({ setActive, introRef, aboutRef, hackRef, visionRef, sponsorsRef, 
     setVision(visionRef.current.offsetTop)
     setTeaser(teaserRef.current.offsetTop)
     setTimeline(timelineRef.current.offsetTop)
-    setSpeakers(speakersRef.current.offsetTop)
+    // setSpeakers(speakersRef.current.offsetTop)
     setSponsors(sponsorsRef.current.offsetTop)
     setContact(contactRef.current.offsetTop)
     setFAQ(faqRef.current.offsetTop)
@@ -67,7 +68,8 @@ const Home = ({ setActive, introRef, aboutRef, hackRef, visionRef, sponsorsRef, 
       scrollFunc()
     }
     scrollFunc()
-  }, [introRef, aboutRef, hackRef, visionRef, sponsorsRef, contactRef, faqRef, timelineRef, faq, offset, intro, about, setActive, hack, vision, sponsors, contact, timeline, teaser, teaserRef, speakers, speakersRef])
+  }, [introRef, aboutRef, hackRef, visionRef, sponsorsRef, contactRef, faqRef, timelineRef, faq, offset, intro, about, setActive, hack, vision, sponsors, contact, timeline, teaser, teaserRef])
+  // }, [introRef, aboutRef, hackRef, visionRef, sponsorsRef, contactRef, faqRef, timelineRef, faq, offset, intro, about, setActive, hack, vision, sponsors, contact, timeline, teaser, teaserRef, speakers, speakersRef])
 
   return (
     <div className='home' id='home'>
@@ -77,7 +79,7 @@ const Home = ({ setActive, introRef, aboutRef, hackRef, visionRef, sponsorsRef, 
       <Vision setVision={setVision} ref={visionRef} />
       <Teaser setTeaser={setTeaser} ref={teaserRef} />
       <Timeline setTimeline={setTimeline} ref={timelineRef} />
-      <Speakers setSpeakers={setSpeakers} ref={speakersRef} />
+      {/* <Speakers setSpeakers={setSpeakers} ref={speakersRef} /> */}
       <Sponsors setSponsors={setSponsors} ref={sponsorsRef} />
       <Faq setFAQ={setFAQ} ref={faqRef} />
       <Contact setContact={setContact} ref={contactRef} />

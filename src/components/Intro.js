@@ -1,5 +1,5 @@
 import React from 'react'
-// import { BsFillPlayFill } from 'react-icons/bs'
+import { BsFillPlayFill } from 'react-icons/bs'
 import intro from './../assets/intro-img.svg'
 
 const Intro = React.forwardRef(({ setIntro }, ref) => {
@@ -25,7 +25,7 @@ const Intro = React.forwardRef(({ setIntro }, ref) => {
               <rect width='334' height='210' fill='#fff' />
               <g id='Group_1' data-name='Group 1' transform='translate(-335 -163)'>
                 <text id='Women_Techies_' data-name='Women Techies' transform='translate(275 180)' fill='#fc257e' fontSize='72' fontFamily='Metropolis' fontWeight='700'><tspan x='90.576' y='57'>Women</tspan><tspan x='95.84' y='120'>Techies</tspan><tspan x='216' y='183' /></text>
-                <text id='_2021' data-name='2021' transform='translate(458 318)' fill='#fc257e' fontSize='37' fontFamily='Metropolis' fontWeight='700'><tspan x='2.007' y='29'>2021</tspan></text>
+                <text id='_2022' data-name='2022' transform='translate(458 318)' fill='#fc257e' fontSize='37' fontFamily='Metropolis' fontWeight='700'><tspan x='2.007' y='29'>2022</tspan></text>
                 <line id='Line_1' data-name='Line 1' x2='79' transform='translate(373.5 333.5)' fill='none' stroke='#fc257e' strokeWidth='3' />
                 <line id='Line_2' data-name='Line 2' x2='79' transform='translate(555.5 333.5)' fill='none' stroke='#fc257e' strokeWidth='3' />
               </g>
@@ -33,18 +33,18 @@ const Intro = React.forwardRef(({ setIntro }, ref) => {
           </svg>
 
         </div>
-        {/* <div className='first-soon'>Coming Soon</div> */}
-        <a href='https://womentechies21.hackerearth.com/' className='register-button' target='_blank' rel='noreferrer'><button className='register button'>Register</button></a>
-        {/* <div
+        <div className='first-soon'>Coming Soon</div>
+        {/* <a href='https://womentechies21.hackerearth.com/' className='register-button' target='_blank' rel='noreferrer'><button className='register button'>Register</button></a> */}
+        <div
           className='apply-button'
           data-hackathon-slug='women-techies'
           data-button-theme='light'
           style={{ height: '44px', width: '312px' }}
-        /> */}
-        <a href='https://dsc.community.dev/events/details/developer-student-clubs-vellore-institute-of-technology-presents-womentechies-2021/#/' target='_blank' rel='noreferrer'>RSVP for Updates</a>
-        {/* <a href='https://www.instagram.com/reel/CLBd9tWBIGY/?igshid=1uga220uun2gt' target='_blank' rel='noreferrer' className='first-teaser'><BsFillPlayFill style={{ color: '#fc257e', cursor: 'pointer' }} />    Recap</a> */}
+        />
+        {/* <a href='https://dsc.community.dev/events/details/developer-student-clubs-vellore-institute-of-technology-presents-womentechies-2021/#/' target='_blank' rel='noreferrer'>RSVP for Updates</a> */}
+        <a href='https://www.instagram.com/reel/CLBd9tWBIGY/?igshid=1uga220uun2gt' target='_blank' rel='noreferrer' className='first-teaser'><BsFillPlayFill style={{ color: '#fc257e', cursor: 'pointer' }} />    Recap</a>
       </div>
-      <div className='first-img'><img src={intro} alt='Women Techies 2021' /></div>
+      <div className='first-img'><img src={intro} alt='Women Techies 2022' /></div>
     </div>
   )
 })

@@ -9,8 +9,8 @@ const About = React.forwardRef(({ setAbout }, ref) => {
         <img className='about-bg' src={aboutBg} alt='bg' />
         <ul>
           <li>
-            <div className='home-title'>About DSC</div>
-            <p>DSC VIT is a student community at VIT Vellore. We strive to bring about technological innovations among students and we do so by providing a platform for them to exhibit their talents. We are a group of passionate designers, developers and managers who work together to bring about collaborative results that better the lives of everyone around us.</p>
+            <div className='home-title'>About GDSC</div>
+            <p>GDSC VIT is a student community at VIT Vellore. We strive to bring about technological innovations among students and we do so by providing a platform for them to exhibit their talents. We are a group of passionate designers, developers and managers who work together to bring about collaborative results that better the lives of everyone around us.</p>
           </li>
           <li>
             <div className='home-title'>About VIT</div>

@@ -143,14 +143,14 @@ const FAQ = React.forwardRef(({ setFAQ }, ref) => {
           </div>
         </div>
 
-        <div className='ac purple'>
+        {/* <div className='ac purple'>
           <h2 className='ac-header'>
             <button className='ac-trigger'>Do we have to miss classes on 15th March, Monday?</button>
           </h2>
           <div className='ac-panel'>
             <p className=''><span className='text'>No, On Duty attendance will be provided to all VIT participants on the 15th.</span></p>
           </div>
-        </div>
+        </div> */}
       </div>
       <div className='app-links'>
         <a href='https://play.google.com/store/apps/details?id=com.dscvit.wt21' target='_blank' rel='noreferrer'><img src={android} alt='play store' /></a>
