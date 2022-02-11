@@ -10,11 +10,11 @@ const Timeline = React.forwardRef(({ setTimeline }, ref) => {
       <ul>
         <li>
           <input type='radio' key='1' value='1' name='radio' id='radio1' checked={checked} onChange={(e) => { setChecked(e.target.value) }} />
-          <label htmlFor='radio1'>14th March</label>
+          <label htmlFor='radio1'>9th April</label>
         </li>
         <li>
           <input type='radio' key='2' value='2' name='radio' id='radio2' checked={!checked} onChange={(e) => { setChecked(!e.target.value) }} />
-          <label htmlFor='radio2'>15th March</label>
+          <label htmlFor='radio2'>10th April</label>
         </li>
       </ul>
       <div className='timeline-img'>
