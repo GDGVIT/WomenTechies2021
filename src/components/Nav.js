@@ -117,7 +117,7 @@ const Nav = ({ active, introRef, aboutRef, hackRef, visionRef, sponsorsRef, cont
       <div className={`discord-widget ${discoom && 'open'}`}>
         <a href='https://discord.gg/PvkaBF7yp4' target='_blank' rel='noreferrer'>
           <img src={discord} alt='Discord' className='discord-logo' />
-          <div className='discord-bg'>Join the #wt21 Discord!</div>
+          <div className='discord-bg'>Join the #wt22 Discord!</div>
         </a>
       </div>
     </>
