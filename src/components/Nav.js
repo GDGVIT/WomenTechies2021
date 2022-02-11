@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { CSSTransition } from 'react-transition-group'
-import dscLogo from './../assets/dsc-logo.png'
+import dscLogo from './../assets/DSClogo.svg'
+// import dscLogo from './../assets/dsc-logo.png'
 import discord from './../assets/discord.png'
 import Modal from './Modal'
 
