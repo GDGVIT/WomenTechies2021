@@ -80,11 +80,11 @@ const Nav = ({ active, introRef, aboutRef, hackRef, visionRef, sponsorsRef, cont
   return (
     <>
       <header>
-        <a href='https://dscvit.com/' target='_blank' rel='noreferrer'><img className='dsc-logo' src={dscLogo} alt='DSC Logo' /></a>
+        <a href='https://dscvit.com/' target='_blank' rel='noreferrer'><img className='dsc-logo' src={dscLogo} alt='GDSC Logo' /></a>
         <nav>
           <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
             <li><span className={`nav-home ${(active === 'intro') ? 'nav-home-active' : ''}`} onClick={introScroll}>Home</span></li>
-            <li><span className={`nav-about ${(active === 'about') ? 'nav-about-active' : ''}`} onClick={aboutScroll}>About DSC</span></li>
+            <li><span className={`nav-about ${(active === 'about') ? 'nav-about-active' : ''}`} onClick={aboutScroll}>About GDSC</span></li>
             <li><span className={`nav-hack ${(active === 'hack') ? 'nav-hack-active' : ''}`} onClick={hackScroll}>Hackathon</span></li>
             <li><span className={`nav-vision ${(active === 'vision') ? 'nav-vision-active' : ''}`} onClick={visionScroll}>Vision</span></li>
             <li><span className={`nav-teaser ${(active === 'teaser') ? 'nav-teaser-active' : ''}`} onClick={teaserScroll}>Teaser</span></li>

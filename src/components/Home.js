@@ -32,7 +32,7 @@ const Home = ({ setActive, introRef, aboutRef, hackRef, visionRef, sponsorsRef, 
     } else if (document.selection && document.selection.type !== 'Control') {
       text = document.selection.createRange().text
     } else return
-    if (text.toLowerCase() === 'dsc' || text.toLowerCase() === 'dsc ') {
+    if (text.toLowerCase() === 'gdsc' || text.toLowerCase() === 'gdsc ') {
       setShow(true)
     }
   }

@@ -1,6 +1,6 @@
 <p align="center">
 <a href="https://dscvit.com">
-	<img src="https://user-images.githubusercontent.com/30529572/92081025-fabe6f00-edb1-11ea-9169-4a8a61a5dd45.png" alt="DSC VIT"/>
+	<img src="https://user-images.githubusercontent.com/30529572/92081025-fabe6f00-edb1-11ea-9169-4a8a61a5dd45.png" alt="GDSC VIT"/>
 </a>
 	<h2 align="center"> Women Techies 2022 - Frontend </h2>
 	<h4 align="center"> Website for Women Techies 2022 </h4>
@@ -63,5 +63,5 @@ npm start
 </table>
 
 <p align="center">
-	Made with :heart: by <a href="https://dscvit.com">DSC VIT</a>
+	Made with :heart: by <a href="https://dscvit.com">GDSC VIT</a>
 </p>
