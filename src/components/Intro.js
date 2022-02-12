@@ -34,7 +34,11 @@ const Intro = React.forwardRef(({ setIntro }, ref) => {
 
         </div>
         <div className='first-soon'>Coming Soon</div>
-        {/* <a href='https://womentechies21.hackerearth.com/' className='register-button' target='_blank' rel='noreferrer'><button className='register button'>Register</button></a> */}
+        <div className='two-buttons'>
+          <a href='https://form.jotform.com/220422866422047' className='register-button' target='_blank' rel='noreferrer'><button className='register button'>Pre-register</button></a>
+          <a href='https://form.jotform.com/220422638589058' className='register-button' target='_blank' rel='noreferrer'><button className='register button'>Sponsor Us</button></a>
+        </div>
+
         <div
           className='apply-button'
           data-hackathon-slug='women-techies'
