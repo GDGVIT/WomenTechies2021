@@ -1901,3 +1901,34 @@ header a {
 .two-buttons {
   margin-top: 1rem;
 }
+
+.odd-sponsor {
+  margin-bottom: 20px;
+}
+
+.odd-sponsor,
+.odd-sponsor .odd-sponsor-link {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  height: max-content;
+  justify-content: center;
+}
+
+.odd-sponsor .odd-sponsor-link .odd-sponsor-img {
+  width: 50%;
+}
+
+@media screen and (min-width: 768px) {
+  .odd-sponsor .odd-sponsor-link .odd-sponsor-img {
+    width: 33%;
+    transform: translateY(-23px);
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .odd-sponsor .odd-sponsor-link .odd-sponsor-img {
+    width: 23%;
+    transform: translateY(-23px);
+  }
+}
