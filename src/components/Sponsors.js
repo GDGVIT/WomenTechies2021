@@ -8,7 +8,7 @@ import katbin from './../assets/past-sponsors/katbin.png'
 // import tezos from './../assets/past-sponsors/tezos.png'
 import stickerMule from '../assets/past-sponsors/sticker-mule.svg'
 import agora from './../assets/past-sponsors/agora.png'
-import yocket from './../assets/past-sponsors/yocket.png'
+// import yocket from './../assets/past-sponsors/yocket.png'
 import balsamiq from './../assets/past-sponsors/balsamiq.png'
 import packtpub from './../assets/past-sponsors/packtpub.png'
 import spike from './../assets/past-sponsors/spike.png'
@@ -44,7 +44,8 @@ const Sponsors = React.forwardRef(({ setSponsors }, ref) => {
         {/* <div><a href='https://tezos.com/' target='_blank' rel='noreferrer'><img src={tezos} alt='Tezos' /></a></div> */}
         <div><a href='https://www.agora.io/' target='_blank' rel='noreferrer'><img src={agora} alt='agora' /></a></div>
         <div><a href='https://balsamiq.com/' target='_blank' rel='noreferrer'><img src={balsamiq} alt='balsamiq' /></a></div>
-        <div><a href='https://yocket.in/' target='_blank' rel='noreferrer'><img src={yocket} alt='Yocket' /></a></div>
+        {/* <div><a href='https://yocket.in/' target='_blank' rel='noreferrer'><img src={yocket} alt='Yocket' /></a></div> */}
+        <div><a href='https://mule.to/p2mg' target='_blank' rel='noreferrer'><img src={stickerMule} alt='stickerMule' /></a></div>
         <div><a href='https://www.packtpub.com/' target='_blank' rel='noreferrer'><img src={packtpub} alt='Packtpub' /></a></div>
         <div><a href='https://spikeapp.in/' target='_blank' rel='noreferrer'><img src={spike} alt='Spike' /></a></div>
         <div><a href='https://academy.kaspersky.com/' target='_blank' rel='noreferrer'><img src={kaspersky} alt='Kaspersky' /></a></div>
@@ -55,11 +56,11 @@ const Sponsors = React.forwardRef(({ setSponsors }, ref) => {
         <div><a href='https://www.wolfram.com/language/' target='_blank' rel='noreferrer'><img src={wolfram} alt='Wolfram Language' /></a></div>
         <div><a href='https://www.marlabs.com/' target='_blank' rel='noreferrer'><img src={marlabs} alt='Marlabs' /></a></div>
       </div>
-      <div className='odd-sponsor'>
+      {/* <div className='odd-sponsor'>
         <a className='odd-sponsor-link' href='https://mule.to/p2mg' target='_blank' rel='noreferrer'>
           <img className='odd-sponsor-img' src={stickerMule} alt='stickerMule' />
         </a>
-      </div>
+      </div> */}
       <a href={brochure} download><button className='download button'><FaDownload style={{ color: '#fff', cursor: 'pointer' }} />     Download Brochure</button></a>
     </div>
   )
