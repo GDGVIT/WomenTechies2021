@@ -6,6 +6,7 @@ import katbin from './../assets/past-sponsors/katbin.png'
 // import matic from './../assets/past-sponsors/matic.png'
 // import portis from './../assets/past-sponsors/portis.png'
 // import tezos from './../assets/past-sponsors/tezos.png'
+import stickerMule from '../assets/past-sponsors/sticker-mule.svg'
 import agora from './../assets/past-sponsors/agora.png'
 import yocket from './../assets/past-sponsors/yocket.png'
 import balsamiq from './../assets/past-sponsors/balsamiq.png'
@@ -53,6 +54,11 @@ const Sponsors = React.forwardRef(({ setSponsors }, ref) => {
         <div><a href='https://nostarch.com/' target='_blank' rel='noreferrer'><img id='starch' src={nostarchpress} alt='No Starch Press' /></a></div>
         <div><a href='https://www.wolfram.com/language/' target='_blank' rel='noreferrer'><img src={wolfram} alt='Wolfram Language' /></a></div>
         <div><a href='https://www.marlabs.com/' target='_blank' rel='noreferrer'><img src={marlabs} alt='Marlabs' /></a></div>
+      </div>
+      <div className='odd-sponsor'>
+        <a className='odd-sponsor-link' href='https://mule.to/p2mg' target='_blank' rel='noreferrer'>
+          <img className='odd-sponsor-img' src={stickerMule} alt='stickerMule' />
+        </a>
       </div>
       <a href={brochure} download><button className='download button'><FaDownload style={{ color: '#fff', cursor: 'pointer' }} />     Download Brochure</button></a>
     </div>
